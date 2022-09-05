@@ -83,6 +83,7 @@ ipython_config.py
 
 # pyenv
 .python-version
+celia
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
@@ -131,6 +132,7 @@ dmypy.json
 # data
 data/curated/
 data/raw/
+data/external/
 
 # OSX .DS_Store file
 .DS_Store
