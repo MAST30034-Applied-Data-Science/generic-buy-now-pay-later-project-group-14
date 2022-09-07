@@ -12,6 +12,7 @@ import argparse
 
 # args = parser.parse_args()
 
+# tables_path = "data/tables/"
 # merchant_path = tables_path + args.merchant
 # consumer_path = tables_path + args.consumer
 # id_lookup_path = tables_path + args.id_lookup
@@ -26,7 +27,6 @@ spark = (
     .getOrCreate()
 )
 
-tables_path = "data/tables/"
 output_path = "data/curated/"
 external_output_path = 'data/external/'
 
@@ -120,9 +120,9 @@ def preprocess_income():
     # TODO: need more comments HERE
     df.columns = df.iloc[5].values.flatten().tolist()
     df = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
-    df = (df.iloc[:, [0, 1, 26]])
+    df = (df.iloc[:, [0, 26]])
     df.drop(df.index[2297:2300], inplace=True)
-    df.set_axis(['SA2_code', 'SA2_name', 'mean_total_income'], axis=1, inplace=True)
+    df.set_axis(['SA2_code', 'mean_total_income'], axis=1, inplace=True)
 
     # temporarily replace missing values with 0
     df.replace({'mean_total_income': {'np': 0}}, inplace=True)
@@ -136,7 +136,6 @@ def preprocess_income():
 def main():
     preprocess_consumer()
     preprocess_merchant()
-
     preprocess_income()
     merge()
     
