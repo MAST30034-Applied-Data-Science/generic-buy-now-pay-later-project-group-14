@@ -2,9 +2,20 @@
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 import pandas as pd
+import argparse
 
-import geopandas as gpd
-from shapely.geometry import Point
+# Create the parser
+# parser = argparse.ArgumentParser()
+# parser.add_argument('merchant', type=str, help='enter the merchant file name')
+# parser.add_argument('consumer', type=str, help='enter the consumer file name')
+# parser.add_argument('id_lookup', type=str, help='enter the consumer-user-details file name')
+
+# args = parser.parse_args()
+
+# merchant_path = tables_path + args.merchant
+# consumer_path = tables_path + args.consumer
+# id_lookup_path = tables_path + args.id_lookup
+
 
 spark = (
     SparkSession.builder.appName("MAST30034 Project 2 etl")
@@ -15,27 +26,68 @@ spark = (
     .getOrCreate()
 )
 
-merchant_path = "data/tables/tbl_merchants.parquet"
-consumer_path = "data/tables/tbl_consumer.csv"
-id_lookup_path = "data/tables/consumer_user_details.parquet"
+tables_path = "data/tables/"
 output_path = "data/curated/"
 external_output_path = 'data/external/'
 
+merchant_path = "data/tables/tbl_merchants.parquet"
+consumer_path = "data/tables/tbl_consumer.csv"
+id_lookup_path = "data/tables/consumer_user_details.parquet"
+transaction_path = "data/tables/transactions_*/*"
+
+
+def merge():
+    # read curated datasets
+    consumer_sdf = spark.read.parquet(output_path + "consumer")
+    transaction_sdf = spark.read.parquet(transaction_path)
+    postcode_SA2_sdf = spark.read.csv(output_path + "processed_postcode.csv", inferSchema =True, header=True)
+    income_sdf = spark.read.csv(output_path + "processed_income.csv", inferSchema =True, header=True)
+    merchant_sdf = spark.read.csv(output_path + "merchant.csv", inferSchema =True, header=True)
+    state_income = pd.read_csv(output_path + "state_mean_income.csv").set_index("state").to_dict()["mean_total_income"]
+
+    # combine consumer with mean total income based on SA2 code
+    sdf = consumer_sdf.join(postcode_SA2_sdf,["postcode"],how="left")
+    sdf = sdf.join(income_sdf, ["SA2_code"], how="left")
+
+    # fill missing total income value with state mean
+    abbrv = ['NSW', 'VIC','QLD', 'SA', 'WA', 'TAS', 'NT', 'ACT']
+    for state in abbrv:
+        sdf = sdf.withColumn("mean_total_income", 
+        F.when((sdf.mean_total_income == 0) & (sdf.state == state), state_income[state]) \
+         .otherwise(sdf.mean_total_income))
+
+    # combine transaction with merchant
+    sdf2 = transaction_sdf.join(merchant_sdf, ["merchant_abn"], how="right")
+    
+    # merge consumer with transaction data
+    data = sdf.join(sdf2, ["user_id"], how="right")
+
+    # save the final combined data
+    data.write.mode("overwrite").parquet(output_path + "full_data")
+
 
 def preprocess_merchant():
-    merchant_df = pd.read_parquet(merchant_path)
-
+    df = pd.read_parquet(merchant_path)
     # extract tags, revenue level and take rate from the "tags" column
-    merchant_df["tags"] = merchant_df["tags"].str.findall(r'[\(\[]+([^\)\]]*)[\)\]]')
-    merchant_df["revenue_level"] = merchant_df["tags"].str[1]
-    merchant_df["take_rate"] = merchant_df["tags"].str[2].str.extract(r'[^\d]*([\d.]*)').astype(float)
+    df["tags"] = df["tags"].str.findall(r'[\(\[]+([^\)\]]*)[\)\]]')
+    df["revenue_level"] = df["tags"].str[1]
+    df["take_rate"] = df["tags"].str[2].str.extract(r'[^\d]*([\d.]*)').astype(float)
 
     # convert all letters in tags to lowercase
-    merchant_df["tags"] = merchant_df["tags"].str[0].str.lower() 
+    df["tags"] = df["tags"].str[0].str.lower() 
     
-    # save the processed data in a csv file
-    merchant_df.to_csv(output_path + "merchant.csv")
+    # classify merchants using tags
+    df['tags'] = df['tags'].str.split(',')
+    df['tags'] = df['tags'].str[0]
 
+    df.loc[df.tags == 'computers', 'tags'] = 'computer'
+    df.loc[df.tags == 'artist', 'tags'] = 'artist supply'
+    df.loc[df.tags == 'art', 'tags'] = 'art dealer'
+    df.loc[df.tags == 'digital', 'tags'] = 'digital goods'
+    df.loc[df.tags == 'lawn', 'tags'] = 'garden supply'
+
+    # save the processed data 
+    df.to_csv(output_path + "merchant.csv")
 
 def preprocess_consumer():
     consumer_sdf = spark.read.option("delimiter", "|").csv(consumer_path, inferSchema =True, header=True)
@@ -45,35 +97,47 @@ def preprocess_consumer():
         id_sdf = id_sdf.withColumn(field, F.col(field).cast("INT"))
 
     # map user id to consumer id
-    output = id_sdf.join(consumer_sdf,["consumer_id"],how="outer")
+    sdf = id_sdf.join(consumer_sdf,["consumer_id"],how="outer")
+
+    # delete irrelevant features, such as name and address
+    sdf = sdf.drop("name", "address")
+
+    # save the processed data 
+    sdf.write.mode("overwrite").parquet(output_path + "consumer")
+
+def preprocess_income():
+    df = pd.read_excel(external_output_path + "total_income.xlsx", sheet_name='Table 1.4')
+
+    # find and store mean total income of each state
+    state_income = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
+    states = ['New South Wales', 'Victoria', 'Queensland', 'South Australia', 'Western Australia', 'Tasmania', 'Northern Territory', 'Australian Capital Territory']
+    state_income = state_income[state_income.iloc[:, 0].isin(states)].iloc[:, [0, 26]]
+    abbrv = ['NSW', 'VIC','QLD', 'SA', 'WA', 'TAS', 'NT', 'ACT']
+    state_income.iloc[:,0] = state_income.iloc[:,0].replace(states,abbrv)
+    state_income.set_axis(['state', 'mean_total_income'], axis=1, inplace=True)
+    state_income.to_csv(output_path + "state_mean_income.csv", index=False)
+
+    # TODO: need more comments HERE
+    df.columns = df.iloc[5].values.flatten().tolist()
+    df = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
+    df = (df.iloc[:, [0, 1, 26]])
+    df.drop(df.index[2297:2300], inplace=True)
+    df.set_axis(['SA2_code', 'SA2_name', 'mean_total_income'], axis=1, inplace=True)
+
+    # temporarily replace missing values with 0
+    df.replace({'mean_total_income': {'np': 0}}, inplace=True)
+    # ignore state mean income 
+    df = df.dropna().reset_index(drop = True)
 
     # save the processed data
-    output.write.mode("overwrite").parquet(output_path + "consumer")
+    df.to_csv(output_path + "processed_income.csv", index=False)
 
 
-def postcode_SA2_lookup():
-    sf = gpd.read_file(external_output_path + "SA2_2021/SA2_2021_AUST_GDA2020.shp")
-    sf = sf.set_index('SA2_CODE21')
-    sf = sf.loc[sf.geometry != None]
+def main():
+    preprocess_consumer()
+    preprocess_merchant()
 
-    all_postcodes = pd.read_csv(external_output_path + "australian_postcodes.csv")
-
-    # extract latitude and longitude of each postal area and remove duplicate postcodes
-    all_postcodes = all_postcodes[['postcode', 'locality', 'long', 'lat']]
-    all_postcodes = all_postcodes.drop_duplicates(subset='postcode', keep="first")
-    all_postcodes["coordinate"] = all_postcodes.apply(lambda x: Point(x.long, x.lat), axis=1)
-
-    # check if the coordinate of a particular postal area is in a SA2 district
-    all_postcodes["SA2_code"] = all_postcodes.apply(lambda x: postcode_to_SA2(x.coordinate, sf), axis=1)
-    all_postcodes.to_csv(output_path + "processed_postcode.csv", index=False)
-
-
-def postcode_to_SA2(coordinate, sf):
-    for SA2_code, row in sf.iterrows():
-        if coordinate.within(row['geometry']):
-            return SA2_code
-
-
-preprocess_consumer()
-preprocess_merchant()
-postcode_SA2_lookup()
+    preprocess_income()
+    merge()
+    
+main()
