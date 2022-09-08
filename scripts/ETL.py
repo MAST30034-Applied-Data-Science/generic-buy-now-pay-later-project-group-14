@@ -79,6 +79,8 @@ def preprocess_merchant():
     # classify merchants using tags
     df['tags'] = df['tags'].str.split(',')
     df['tags'] = df['tags'].str[0]
+    df['tags'] = df['tags'].str.split(' ')
+    df['tags'] = df['tags'].str[0]
 
     df.loc[df.tags == 'computers', 'tags'] = 'computer'
     df.loc[df.tags == 'artist', 'tags'] = 'artist supply'
