@@ -53,7 +53,7 @@ def merge():
     abbrv = ['NSW', 'VIC','QLD', 'SA', 'WA', 'TAS', 'NT', 'ACT']
     for state in abbrv:
         sdf = sdf.withColumn("mean_total_income", 
-        F.when((sdf.mean_total_income == 0) & (sdf.state == state), state_income[state]) \
+        F.when(((sdf.mean_total_income == 0) | (sdf.mean_total_income.isNull())) & (sdf.state == state), state_income[state]) \
          .otherwise(sdf.mean_total_income))
 
     # combine transaction with merchant
