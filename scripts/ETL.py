@@ -55,6 +55,7 @@ def merge():
         sdf = sdf.withColumn("mean_total_income", 
         F.when(((sdf.mean_total_income == 0) | (sdf.mean_total_income.isNull())) & (sdf.state == state), state_income[state]) \
          .otherwise(sdf.mean_total_income))
+        sdf.cache()
 
     # combine transaction with merchant
     sdf2 = transaction_sdf.join(merchant_sdf, ["merchant_abn"], how="right")
