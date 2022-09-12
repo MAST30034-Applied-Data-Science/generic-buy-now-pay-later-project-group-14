@@ -4,20 +4,6 @@ from pyspark.sql import functions as F
 import pandas as pd
 import argparse
 
-# Create the parser
-# parser = argparse.ArgumentParser()
-# parser.add_argument('merchant', type=str, help='enter the merchant file name')
-# parser.add_argument('consumer', type=str, help='enter the consumer file name')
-# parser.add_argument('id_lookup', type=str, help='enter the consumer-user-details file name')
-
-# args = parser.parse_args()
-
-# tables_path = "data/tables/"
-# merchant_path = tables_path + args.merchant
-# consumer_path = tables_path + args.consumer
-# id_lookup_path = tables_path + args.id_lookup
-
-
 spark = (
     SparkSession.builder.appName("MAST30034 Project 2 etl")
     .config("spark.sql.repl.eagerEval.enabled", True) 
@@ -27,14 +13,23 @@ spark = (
     .getOrCreate()
 )
 
-output_path = "data/curated/"
-external_output_path = 'data/external/'
+# create the parser
+parser = argparse.ArgumentParser()
+parser.add_argument('tables', type=str, help='enter the location of data files (e.g. "../data/tables/")')
+args = parser.parse_args()
 
-merchant_path = "data/tables/tbl_merchants.parquet"
-consumer_path = "data/tables/tbl_consumer.csv"
-id_lookup_path = "data/tables/consumer_user_details.parquet"
-transaction_path = "data/tables/transactions_*/*"
+merchant_path = args.tables + "tbl_merchants.parquet"
+consumer_path = args.tables + "tbl_consumer.csv"
+id_lookup_path = args.tables + "consumer_user_details.parquet"
+transaction_path = args.tables + "transactions_*/*"
 
+output_path = "../data/curated/"
+external_output_path = '../data/external/'
+
+# merchant_path = "data/tables/tbl_merchants.parquet"
+# consumer_path = "data/tables/tbl_consumer.csv"
+# id_lookup_path = "data/tables/consumer_user_details.parquet"
+# transaction_path = "data/tables/transactions_*/*"
 
 def merge():
     # read curated datasets
@@ -112,38 +107,10 @@ def preprocess_consumer():
     # save the processed data 
     sdf.write.mode("overwrite").parquet(output_path + "consumer")
 
-def preprocess_income():
-    df = pd.read_excel(external_output_path + "total_income.xlsx", sheet_name='Table 1.4')
-
-    # find and store mean total income of each state
-    state_income = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
-    states = ['New South Wales', 'Victoria', 'Queensland', 'South Australia', 'Western Australia', 'Tasmania', 'Northern Territory', 'Australian Capital Territory']
-    state_income = state_income[state_income.iloc[:, 0].isin(states)].iloc[:, [0, 26]]
-    abbrv = ['NSW', 'VIC','QLD', 'SA', 'WA', 'TAS', 'NT', 'ACT']
-    state_income.iloc[:,0] = state_income.iloc[:,0].replace(states,abbrv)
-    state_income.set_axis(['state', 'mean_total_income'], axis=1, inplace=True)
-    state_income.to_csv(output_path + "state_mean_income.csv", index=False)
-
-    # TODO: need more comments HERE
-    df.columns = df.iloc[5].values.flatten().tolist()
-    df = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
-    df = (df.iloc[:, [0, 26]])
-    df.drop(df.index[2297:2300], inplace=True)
-    df.set_axis(['SA2_code', 'mean_total_income'], axis=1, inplace=True)
-
-    # temporarily replace missing values with 0
-    df.replace({'mean_total_income': {'np': 0}}, inplace=True)
-    # ignore state mean income 
-    df = df.dropna().reset_index(drop = True)
-
-    # save the processed data
-    df.to_csv(output_path + "processed_income.csv", index=False)
-
 
 def main():
     preprocess_consumer()
     preprocess_merchant()
-    preprocess_income()
     merge()
     
 main()

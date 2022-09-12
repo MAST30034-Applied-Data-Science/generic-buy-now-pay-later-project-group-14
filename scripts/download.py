@@ -3,7 +3,7 @@ import zipfile
 import os
 
 
-external_output_path = 'data/external/'
+external_output_path = '../data/external/'
 
 url_all_postcodes = "https://www.matthewproctor.com/Content/postcodes/australian_postcodes.csv"
 url_SA2_shapefile = "https://www.abs.gov.au/statistics/standards/australian-statistical-geography" + \
