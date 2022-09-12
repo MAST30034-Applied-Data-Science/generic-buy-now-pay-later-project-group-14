@@ -39,7 +39,11 @@ transaction_path = "data/tables/transactions_*/*"
 def merge():
     # read curated datasets
     consumer_sdf = spark.read.parquet(output_path + "consumer")
-    transaction_sdf = spark.read.parquet(transaction_path)
+    transaction_sdf = spark.read.parquet(transaction_path)\
+        .withColumn(
+            "order_datetime", 
+            F.to_date(F.regexp_extract(F.split(F.input_file_name(), "=")[1], "(.*)/",1), "yyyy-MM-dd")
+        )
     postcode_SA2_sdf = spark.read.csv(output_path + "processed_postcode.csv", inferSchema =True, header=True)
     income_sdf = spark.read.csv(output_path + "processed_income.csv", inferSchema =True, header=True)
     merchant_sdf = spark.read.csv(output_path + "merchant.csv", inferSchema =True, header=True)
