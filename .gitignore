@@ -134,5 +134,8 @@ data/curated/
 data/raw/
 data/external/
 
+# html map
+*.html
+
 # OSX .DS_Store file
 .DS_Store
