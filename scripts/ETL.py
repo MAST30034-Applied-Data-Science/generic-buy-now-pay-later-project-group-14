@@ -64,6 +64,7 @@ def merge():
 
     # save the final combined data
     data.write.mode("overwrite").parquet(output_path + "full_data")
+    sdf.unpersist()
 
 
 def preprocess_merchant():
