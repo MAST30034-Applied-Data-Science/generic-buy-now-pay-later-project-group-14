@@ -23,8 +23,8 @@ consumer_path = args.tables + "tbl_consumer.csv"
 id_lookup_path = args.tables + "consumer_user_details.parquet"
 transaction_path = args.tables + "transactions_*/*"
 
-output_path = "../data/curated/"
-external_output_path = '../data/external/'
+output_path = "data/curated/"
+external_output_path = 'data/external/'
 
 # merchant_path = "data/tables/tbl_merchants.parquet"
 # consumer_path = "data/tables/tbl_consumer.csv"
