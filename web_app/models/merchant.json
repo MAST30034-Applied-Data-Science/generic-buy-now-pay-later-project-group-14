@@ -1,0 +1,982 @@
+{
+  "10023283211": {
+    "merchant_abn": "10023283211",
+    "name": "Felis Limited",
+    "tags": "furniture",
+    "revenue_level": "e",
+    "take_rate": "0.18"
+  },
+  "10142254217": {
+    "merchant_abn": "10142254217",
+    "name": "Arcu Ac Orci Corporation",
+    "tags": "cable",
+    "revenue_level": "b",
+    "take_rate": "4.22"
+  },
+  "10165489824": {
+    "merchant_abn": "10165489824",
+    "name": "Nunc Sed Company",
+    "tags": "jewelry",
+    "revenue_level": "b",
+    "take_rate": "4.4"
+  },
+  "10187291046": {
+    "merchant_abn": "10187291046",
+    "name": "Ultricies Dignissim Lacus Foundation",
+    "tags": "watch",
+    "revenue_level": "b",
+    "take_rate": "3.29"
+  },
+  "10192359162": {
+    "merchant_abn": "10192359162",
+    "name": "Enim Condimentum PC",
+    "tags": "music",
+    "revenue_level": "a",
+    "take_rate": "6.33"
+  },
+  "10206519221": {
+    "merchant_abn": "10206519221",
+    "name": "Fusce Company",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.34"
+  },
+  "10255988167": {
+    "merchant_abn": "10255988167",
+    "name": "Aliquam Enim Incorporated",
+    "tags": "computer",
+    "revenue_level": "b",
+    "take_rate": "4.32"
+  },
+  "10264435225": {
+    "merchant_abn": "10264435225",
+    "name": "Ipsum Primis Ltd",
+    "tags": "watch",
+    "revenue_level": "c",
+    "take_rate": "2.39"
+  },
+  "10279061213": {
+    "merchant_abn": "10279061213",
+    "name": "Pede Ultrices Industries",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "5.71"
+  },
+  "10323485998": {
+    "merchant_abn": "10323485998",
+    "name": "Nunc Inc.",
+    "tags": "furniture",
+    "revenue_level": "a",
+    "take_rate": "6.61"
+  },
+  "10342410215": {
+    "merchant_abn": "10342410215",
+    "name": "Facilisis Facilisis Corp.",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "6.34"
+  },
+  "10346855916": {
+    "merchant_abn": "10346855916",
+    "name": "Odio Institute",
+    "tags": "equipment",
+    "revenue_level": "b",
+    "take_rate": "3.57"
+  },
+  "10364012396": {
+    "merchant_abn": "10364012396",
+    "name": "Rutrum Justo Ltd",
+    "tags": "music",
+    "revenue_level": "b",
+    "take_rate": "3.63"
+  },
+  "10385011947": {
+    "merchant_abn": "10385011947",
+    "name": "Tellus Foundation",
+    "tags": "artist supply",
+    "revenue_level": "b",
+    "take_rate": "3.17"
+  },
+  "10385163239": {
+    "merchant_abn": "10385163239",
+    "name": "Sed Et Company",
+    "tags": "florists",
+    "revenue_level": "a",
+    "take_rate": "6.61"
+  },
+  "10385250025": {
+    "merchant_abn": "10385250025",
+    "name": "Id Ltd",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "5.54"
+  },
+  "10404542215": {
+    "merchant_abn": "10404542215",
+    "name": "Consequat Foundation",
+    "tags": "antique",
+    "revenue_level": "a",
+    "take_rate": "6.93"
+  },
+  "10430380319": {
+    "merchant_abn": "10430380319",
+    "name": "Sit Amet Nulla Corp.",
+    "tags": "motor",
+    "revenue_level": "b",
+    "take_rate": "4.97"
+  },
+  "10441711491": {
+    "merchant_abn": "10441711491",
+    "name": "Massa Vestibulum Foundation",
+    "tags": "motor",
+    "revenue_level": "a",
+    "take_rate": "5.77"
+  },
+  "10462560289": {
+    "merchant_abn": "10462560289",
+    "name": "Ut Consulting",
+    "tags": "gift",
+    "revenue_level": "c",
+    "take_rate": "2.95"
+  },
+  "10463252268": {
+    "merchant_abn": "10463252268",
+    "name": "Id Mollis Corporation",
+    "tags": "artist supply",
+    "revenue_level": "a",
+    "take_rate": "6.61"
+  },
+  "10487253336": {
+    "merchant_abn": "10487253336",
+    "name": "Laoreet Lectus Associates",
+    "tags": "artist supply",
+    "revenue_level": "b",
+    "take_rate": "3.92"
+  },
+  "10530696903": {
+    "merchant_abn": "10530696903",
+    "name": "Ut Semper Industries",
+    "tags": "books",
+    "revenue_level": "a",
+    "take_rate": "6.46"
+  },
+  "10545955006": {
+    "merchant_abn": "10545955006",
+    "name": "Lacus Vestibulum Inc.",
+    "tags": "florists",
+    "revenue_level": "a",
+    "take_rate": "6.16"
+  },
+  "10553813474": {
+    "merchant_abn": "10553813474",
+    "name": "Commodo Hendrerit Donec Corporation",
+    "tags": "artist supply",
+    "revenue_level": "b",
+    "take_rate": "4.31"
+  },
+  "10596295795": {
+    "merchant_abn": "10596295795",
+    "name": "Egestas A Associates",
+    "tags": "jewelry",
+    "revenue_level": "a",
+    "take_rate": "6.84"
+  },
+  "10618089367": {
+    "merchant_abn": "10618089367",
+    "name": "Enim Consequat Institute",
+    "tags": "stationery",
+    "revenue_level": "b",
+    "take_rate": "4.01"
+  },
+  "10648956813": {
+    "merchant_abn": "10648956813",
+    "name": "Proin Nisl Institute",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "6.66"
+  },
+  "10651113986": {
+    "merchant_abn": "10651113986",
+    "name": "Sed Et Libero PC",
+    "tags": "tent",
+    "revenue_level": "b",
+    "take_rate": "3.25"
+  },
+  "10702078694": {
+    "merchant_abn": "10702078694",
+    "name": "Fermentum Risus Foundation",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "5.95"
+  },
+  "10714068705": {
+    "merchant_abn": "10714068705",
+    "name": "Sollicitudin Commodo Ipsum Industries",
+    "tags": "furniture",
+    "revenue_level": "c",
+    "take_rate": "2.51"
+  },
+  "10739268011": {
+    "merchant_abn": "10739268011",
+    "name": "Libero Proin Mi Incorporated",
+    "tags": "art dealer",
+    "revenue_level": "a",
+    "take_rate": "6.25"
+  },
+  "10746056613": {
+    "merchant_abn": "10746056613",
+    "name": "Risus Associates",
+    "tags": "music",
+    "revenue_level": "a",
+    "take_rate": "6.76"
+  },
+  "10848766800": {
+    "merchant_abn": "10848766800",
+    "name": "Ut Dolor Dapibus LLP",
+    "tags": "bicycle",
+    "revenue_level": "c",
+    "take_rate": "2.08"
+  },
+  "10854978569": {
+    "merchant_abn": "10854978569",
+    "name": "Dui Cras Pellentesque Limited",
+    "tags": "computer",
+    "revenue_level": "b",
+    "take_rate": "4.23"
+  },
+  "10860706939": {
+    "merchant_abn": "10860706939",
+    "name": "Vitae Aliquet Nec Associates",
+    "tags": "furniture",
+    "revenue_level": "c",
+    "take_rate": "2.99"
+  },
+  "10881038707": {
+    "merchant_abn": "10881038707",
+    "name": "Sed Facilisis Vitae Incorporated",
+    "tags": "jewelry",
+    "revenue_level": "a",
+    "take_rate": "6.24"
+  },
+  "10901349044": {
+    "merchant_abn": "10901349044",
+    "name": "Per Inceptos Company",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "5.96"
+  },
+  "10922217544": {
+    "merchant_abn": "10922217544",
+    "name": "Justo Associates",
+    "tags": "watch",
+    "revenue_level": "c",
+    "take_rate": "1.68"
+  },
+  "10930486968": {
+    "merchant_abn": "10930486968",
+    "name": "Metus Vitae Velit LLP",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "5.73"
+  },
+  "10945019164": {
+    "merchant_abn": "10945019164",
+    "name": "Nam Associates",
+    "tags": "digital goods",
+    "revenue_level": "a",
+    "take_rate": "5.99"
+  },
+  "10955677986": {
+    "merchant_abn": "10955677986",
+    "name": "Arcu Iaculis Corporation",
+    "tags": "shoe",
+    "revenue_level": "a",
+    "take_rate": "5.64"
+  },
+  "10959028715": {
+    "merchant_abn": "10959028715",
+    "name": "Ante Maecenas Ltd",
+    "tags": "furniture",
+    "revenue_level": "b",
+    "take_rate": "4.28"
+  },
+  "10995883576": {
+    "merchant_abn": "10995883576",
+    "name": "Non Feugiat Incorporated",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.22"
+  },
+  "11017796471": {
+    "merchant_abn": "11017796471",
+    "name": "Sodales Mauris Consulting",
+    "tags": "opticians",
+    "revenue_level": "b",
+    "take_rate": "4.0"
+  },
+  "11024352823": {
+    "merchant_abn": "11024352823",
+    "name": "Aliquet Metus Urna LLP",
+    "tags": "antique",
+    "revenue_level": "c",
+    "take_rate": "2.62"
+  },
+  "11076688542": {
+    "merchant_abn": "11076688542",
+    "name": "Amet Diam Industries",
+    "tags": "stationery",
+    "revenue_level": "c",
+    "take_rate": "2.52"
+  },
+  "11089768124": {
+    "merchant_abn": "11089768124",
+    "name": "Rutrum Corp.",
+    "tags": "computer",
+    "revenue_level": "c",
+    "take_rate": "2.78"
+  },
+  "11093673306": {
+    "merchant_abn": "11093673306",
+    "name": "Ac Mi Corp.",
+    "tags": "watch",
+    "revenue_level": "a",
+    "take_rate": "6.74"
+  },
+  "11121775571": {
+    "merchant_abn": "11121775571",
+    "name": "Egestas Nunc Associates",
+    "tags": "digital goods",
+    "revenue_level": "a",
+    "take_rate": "6.58"
+  },
+  "11134994590": {
+    "merchant_abn": "11134994590",
+    "name": "Quis Massa Mauris Ltd",
+    "tags": "jewelry",
+    "revenue_level": "c",
+    "take_rate": "2.41"
+  },
+  "11149063370": {
+    "merchant_abn": "11149063370",
+    "name": "Et Arcu Limited",
+    "tags": "art dealer",
+    "revenue_level": "b",
+    "take_rate": "4.84"
+  },
+  "11173270682": {
+    "merchant_abn": "11173270682",
+    "name": "Feugiat Tellus LLP",
+    "tags": "computer",
+    "revenue_level": "d",
+    "take_rate": "1.26"
+  },
+  "11199348915": {
+    "merchant_abn": "11199348915",
+    "name": "Orci Luctus PC",
+    "tags": "health",
+    "revenue_level": "b",
+    "take_rate": "4.1"
+  },
+  "11208869091": {
+    "merchant_abn": "11208869091",
+    "name": "Cursus Et Eros LLP",
+    "tags": "hobby",
+    "revenue_level": "a",
+    "take_rate": "6.48"
+  },
+  "11215815177": {
+    "merchant_abn": "11215815177",
+    "name": "Scelerisque Scelerisque Ltd",
+    "tags": "tent",
+    "revenue_level": "b",
+    "take_rate": "4.77"
+  },
+  "11237511112": {
+    "merchant_abn": "11237511112",
+    "name": "Magna Institute",
+    "tags": "opticians",
+    "revenue_level": "c",
+    "take_rate": "2.11"
+  },
+  "11243046390": {
+    "merchant_abn": "11243046390",
+    "name": "Ornare Placerat Foundation",
+    "tags": "books",
+    "revenue_level": "c",
+    "take_rate": "1.94"
+  },
+  "11285988014": {
+    "merchant_abn": "11285988014",
+    "name": "Tincidunt Pede Company",
+    "tags": "digital goods",
+    "revenue_level": "a",
+    "take_rate": "6.3"
+  },
+  "11304124014": {
+    "merchant_abn": "11304124014",
+    "name": "Nostra Per Inceptos Ltd",
+    "tags": "shoe",
+    "revenue_level": "a",
+    "take_rate": "5.54"
+  },
+  "11355018654": {
+    "merchant_abn": "11355018654",
+    "name": "Interdum Inc.",
+    "tags": "shoe",
+    "revenue_level": "a",
+    "take_rate": "6.24"
+  },
+  "11411018019": {
+    "merchant_abn": "11411018019",
+    "name": "Ipsum Sodales Industries",
+    "tags": "hobby",
+    "revenue_level": "c",
+    "take_rate": "2.17"
+  },
+  "11422053652": {
+    "merchant_abn": "11422053652",
+    "name": "Aptent Taciti Consulting",
+    "tags": "shoe",
+    "revenue_level": "b",
+    "take_rate": "4.74"
+  },
+  "11422618712": {
+    "merchant_abn": "11422618712",
+    "name": "Praesent Luctus Inc.",
+    "tags": "computer",
+    "revenue_level": "c",
+    "take_rate": "1.45"
+  },
+  "11437621158": {
+    "merchant_abn": "11437621158",
+    "name": "Nam Foundation",
+    "tags": "motor",
+    "revenue_level": "b",
+    "take_rate": "4.53"
+  },
+  "11439466003": {
+    "merchant_abn": "11439466003",
+    "name": "Blandit At LLC",
+    "tags": "shoe",
+    "revenue_level": "a",
+    "take_rate": "5.71"
+  },
+  "11452293720": {
+    "merchant_abn": "11452293720",
+    "name": "Sed Neque Sed Inc.",
+    "tags": "cable",
+    "revenue_level": "a",
+    "take_rate": "5.78"
+  },
+  "11470993597": {
+    "merchant_abn": "11470993597",
+    "name": "Sed Associates",
+    "tags": "watch",
+    "revenue_level": "d",
+    "take_rate": "1.35"
+  },
+  "11563852275": {
+    "merchant_abn": "11563852275",
+    "name": "Proin Vel Incorporated",
+    "tags": "florists",
+    "revenue_level": "c",
+    "take_rate": "2.99"
+  },
+  "11566786699": {
+    "merchant_abn": "11566786699",
+    "name": "Euismod Et Institute",
+    "tags": "opticians",
+    "revenue_level": "c",
+    "take_rate": "2.62"
+  },
+  "11588046517": {
+    "merchant_abn": "11588046517",
+    "name": "Dolor Industries",
+    "tags": "health",
+    "revenue_level": "b",
+    "take_rate": "3.94"
+  },
+  "11590404675": {
+    "merchant_abn": "11590404675",
+    "name": "Arcu Sed PC",
+    "tags": "antique",
+    "revenue_level": "b",
+    "take_rate": "4.19"
+  },
+  "11633090957": {
+    "merchant_abn": "11633090957",
+    "name": "Cum Sociis Incorporated",
+    "tags": "garden supply",
+    "revenue_level": "b",
+    "take_rate": "4.0"
+  },
+  "11700214701": {
+    "merchant_abn": "11700214701",
+    "name": "Vitae Aliquam Incorporated",
+    "tags": "tent",
+    "revenue_level": "a",
+    "take_rate": "6.2"
+  },
+  "11766327188": {
+    "merchant_abn": "11766327188",
+    "name": "Ante Maecenas Mi Incorporated",
+    "tags": "gift",
+    "revenue_level": "c",
+    "take_rate": "2.57"
+  },
+  "11788487195": {
+    "merchant_abn": "11788487195",
+    "name": "Id Magna LLP",
+    "tags": "music",
+    "revenue_level": "b",
+    "take_rate": "3.51"
+  },
+  "11791943985": {
+    "merchant_abn": "11791943985",
+    "name": "Nulla Magna Incorporated",
+    "tags": "watch",
+    "revenue_level": "b",
+    "take_rate": "5.01"
+  },
+  "11800043583": {
+    "merchant_abn": "11800043583",
+    "name": "Morbi Vehicula Inc.",
+    "tags": "jewelry",
+    "revenue_level": "c",
+    "take_rate": "2.89"
+  },
+  "11802512399": {
+    "merchant_abn": "11802512399",
+    "name": "At Egestas A Corp.",
+    "tags": "bicycle",
+    "revenue_level": "a",
+    "take_rate": "5.82"
+  },
+  "11841065357": {
+    "merchant_abn": "11841065357",
+    "name": "Eu Tellus Industries",
+    "tags": "motor",
+    "revenue_level": "b",
+    "take_rate": "4.42"
+  },
+  "11848576000": {
+    "merchant_abn": "11848576000",
+    "name": "Aenean Eget Corporation",
+    "tags": "hobby",
+    "revenue_level": "c",
+    "take_rate": "1.57"
+  },
+  "11895748930": {
+    "merchant_abn": "11895748930",
+    "name": "Gravida Inc.",
+    "tags": "garden supply",
+    "revenue_level": "b",
+    "take_rate": "3.27"
+  },
+  "11944993446": {
+    "merchant_abn": "11944993446",
+    "name": "Tincidunt Dui Corp.",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.6"
+  },
+  "11961681734": {
+    "merchant_abn": "11961681734",
+    "name": "Dui Cras Pellentesque Company",
+    "tags": "health",
+    "revenue_level": "a",
+    "take_rate": "6.46"
+  },
+  "11974270529": {
+    "merchant_abn": "11974270529",
+    "name": "Dui Fusce Corp.",
+    "tags": "furniture",
+    "revenue_level": "b",
+    "take_rate": "3.9"
+  },
+  "11975295389": {
+    "merchant_abn": "11975295389",
+    "name": "Tortor Corp.",
+    "tags": "art dealer",
+    "revenue_level": "c",
+    "take_rate": "2.79"
+  },
+  "11981237946": {
+    "merchant_abn": "11981237946",
+    "name": "Sed Molestie Sed Institute",
+    "tags": "digital goods",
+    "revenue_level": "a",
+    "take_rate": "6.43"
+  },
+  "12014115545": {
+    "merchant_abn": "12014115545",
+    "name": "In Lobortis Company",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.35"
+  },
+  "12031655138": {
+    "merchant_abn": "12031655138",
+    "name": "Tincidunt Aliquam Arcu Corp.",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.96"
+  },
+  "12034469787": {
+    "merchant_abn": "12034469787",
+    "name": "Pede Suspendisse Corp.",
+    "tags": "shoe",
+    "revenue_level": "a",
+    "take_rate": "5.83"
+  },
+  "12037481016": {
+    "merchant_abn": "12037481016",
+    "name": "Consequat LLP",
+    "tags": "opticians",
+    "revenue_level": "a",
+    "take_rate": "5.99"
+  },
+  "12042198256": {
+    "merchant_abn": "12042198256",
+    "name": "Donec Nibh LLP",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "6.45"
+  },
+  "12103450178": {
+    "merchant_abn": "12103450178",
+    "name": "Tincidunt Tempus Incorporated",
+    "tags": "equipment",
+    "revenue_level": "b",
+    "take_rate": "3.17"
+  },
+  "12133839110": {
+    "merchant_abn": "12133839110",
+    "name": "Et Eros Limited",
+    "tags": "tent",
+    "revenue_level": "a",
+    "take_rate": "6.69"
+  },
+  "12161076724": {
+    "merchant_abn": "12161076724",
+    "name": "Eu Ultrices Ltd",
+    "tags": "telecom",
+    "revenue_level": "b",
+    "take_rate": "4.7"
+  },
+  "12171241826": {
+    "merchant_abn": "12171241826",
+    "name": "Interdum Sed Foundation",
+    "tags": "computer",
+    "revenue_level": "b",
+    "take_rate": "4.13"
+  },
+  "12173100693": {
+    "merchant_abn": "12173100693",
+    "name": "Quam Quis Diam Foundation",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "5.65"
+  },
+  "12182018430": {
+    "merchant_abn": "12182018430",
+    "name": "Integer In Ltd",
+    "tags": "telecom",
+    "revenue_level": "b",
+    "take_rate": "3.27"
+  },
+  "12183270048": {
+    "merchant_abn": "12183270048",
+    "name": "Risus Consulting",
+    "tags": "cable",
+    "revenue_level": "c",
+    "take_rate": "2.46"
+  },
+  "12185659961": {
+    "merchant_abn": "12185659961",
+    "name": "Aliquam Ornare Libero LLP",
+    "tags": "music",
+    "revenue_level": "b",
+    "take_rate": "4.55"
+  },
+  "12208064492": {
+    "merchant_abn": "12208064492",
+    "name": "Nullam Ut Industries",
+    "tags": "hobby",
+    "revenue_level": "a",
+    "take_rate": "6.95"
+  },
+  "12219088747": {
+    "merchant_abn": "12219088747",
+    "name": "Velit Corp.",
+    "tags": "gift",
+    "revenue_level": "b",
+    "take_rate": "3.22"
+  },
+  "12240378188": {
+    "merchant_abn": "12240378188",
+    "name": "Ut Ipsum Corp.",
+    "tags": "jewelry",
+    "revenue_level": "b",
+    "take_rate": "4.35"
+  },
+  "12296390138": {
+    "merchant_abn": "12296390138",
+    "name": "Montes Nascetur Ridiculus Industries",
+    "tags": "florists",
+    "revenue_level": "c",
+    "take_rate": "2.72"
+  },
+  "12353567572": {
+    "merchant_abn": "12353567572",
+    "name": "Quam Curabitur Company",
+    "tags": "cable",
+    "revenue_level": "c",
+    "take_rate": "2.35"
+  },
+  "12374632228": {
+    "merchant_abn": "12374632228",
+    "name": "Posuere Enim Incorporated",
+    "tags": "hobby",
+    "revenue_level": "c",
+    "take_rate": "2.88"
+  },
+  "12380299397": {
+    "merchant_abn": "12380299397",
+    "name": "Neque Morbi Foundation",
+    "tags": "artist supply",
+    "revenue_level": "b",
+    "take_rate": "3.22"
+  },
+  "12395011633": {
+    "merchant_abn": "12395011633",
+    "name": "Luctus Sit Corporation",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.01"
+  },
+  "12404803031": {
+    "merchant_abn": "12404803031",
+    "name": "Porttitor Scelerisque Neque Limited",
+    "tags": "hobby",
+    "revenue_level": "b",
+    "take_rate": "3.5"
+  },
+  "12426913844": {
+    "merchant_abn": "12426913844",
+    "name": "Diam Proin Industries",
+    "tags": "hobby",
+    "revenue_level": "b",
+    "take_rate": "4.0"
+  },
+  "12434006854": {
+    "merchant_abn": "12434006854",
+    "name": "Feugiat Non Associates",
+    "tags": "stationery",
+    "revenue_level": "a",
+    "take_rate": "5.66"
+  },
+  "12438697459": {
+    "merchant_abn": "12438697459",
+    "name": "At Arcu Industries",
+    "tags": "watch",
+    "revenue_level": "b",
+    "take_rate": "4.48"
+  },
+  "12476477880": {
+    "merchant_abn": "12476477880",
+    "name": "Egestas A Scelerisque Limited",
+    "tags": "books",
+    "revenue_level": "b",
+    "take_rate": "3.73"
+  },
+  "12483082042": {
+    "merchant_abn": "12483082042",
+    "name": "Sed PC",
+    "tags": "opticians",
+    "revenue_level": "b",
+    "take_rate": "5.0"
+  },
+  "12497320096": {
+    "merchant_abn": "12497320096",
+    "name": "Velit Quisque LLP",
+    "tags": "watch",
+    "revenue_level": "a",
+    "take_rate": "6.3"
+  },
+  "12513701055": {
+    "merchant_abn": "12513701055",
+    "name": "Et Lacinia Industries",
+    "tags": "books",
+    "revenue_level": "a",
+    "take_rate": "6.01"
+  },
+  "12516851436": {
+    "merchant_abn": "12516851436",
+    "name": "Mollis Corp.",
+    "tags": "watch",
+    "revenue_level": "a",
+    "take_rate": "6.71"
+  },
+  "12543580354": {
+    "merchant_abn": "12543580354",
+    "name": "Ut Aliquam Corp.",
+    "tags": "shoe",
+    "revenue_level": "b",
+    "take_rate": "3.78"
+  },
+  "12578813079": {
+    "merchant_abn": "12578813079",
+    "name": "Eros Corporation",
+    "tags": "cable",
+    "revenue_level": "a",
+    "take_rate": "6.29"
+  },
+  "12710873213": {
+    "merchant_abn": "12710873213",
+    "name": "Maecenas Mi Felis Limited",
+    "tags": "health",
+    "revenue_level": "b",
+    "take_rate": "5.04"
+  },
+  "12711807314": {
+    "merchant_abn": "12711807314",
+    "name": "Senectus Foundation",
+    "tags": "health",
+    "revenue_level": "c",
+    "take_rate": "1.5"
+  },
+  "12741443840": {
+    "merchant_abn": "12741443840",
+    "name": "Tincidunt Aliquam Limited",
+    "tags": "equipment",
+    "revenue_level": "a",
+    "take_rate": "5.55"
+  },
+  "12771097467": {
+    "merchant_abn": "12771097467",
+    "name": "At Pretium Corp.",
+    "tags": "motor",
+    "revenue_level": "a",
+    "take_rate": "6.95"
+  },
+  "12840456630": {
+    "merchant_abn": "12840456630",
+    "name": "Purus Inc.",
+    "tags": "books",
+    "revenue_level": "a",
+    "take_rate": "6.32"
+  },
+  "12847992240": {
+    "merchant_abn": "12847992240",
+    "name": "Nec Enim Company",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "5.9"
+  },
+  "12870663624": {
+    "merchant_abn": "12870663624",
+    "name": "Vestibulum Ut Eros Corporation",
+    "tags": "gift",
+    "revenue_level": "a",
+    "take_rate": "6.78"
+  },
+  "12888399565": {
+    "merchant_abn": "12888399565",
+    "name": "In Molestie Limited",
+    "tags": "bicycle",
+    "revenue_level": "b",
+    "take_rate": "4.25"
+  },
+  "12899341959": {
+    "merchant_abn": "12899341959",
+    "name": "Consectetuer Euismod Inc.",
+    "tags": "bicycle",
+    "revenue_level": "b",
+    "take_rate": "3.81"
+  },
+  "12927607277": {
+    "merchant_abn": "12927607277",
+    "name": "Amet Orci Industries",
+    "tags": "tent",
+    "revenue_level": "d",
+    "take_rate": "0.83"
+  },
+  "12959550150": {
+    "merchant_abn": "12959550150",
+    "name": "Nunc Risus Company",
+    "tags": "books",
+    "revenue_level": "b",
+    "take_rate": "3.35"
+  },
+  "12983555508": {
+    "merchant_abn": "12983555508",
+    "name": "Nibh Lacinia Foundation",
+    "tags": "jewelry",
+    "revenue_level": "b",
+    "take_rate": "5.09"
+  },
+  "13041890826": {
+    "merchant_abn": "13041890826",
+    "name": "Sit Amet Ltd",
+    "tags": "music",
+    "revenue_level": "b",
+    "take_rate": "4.33"
+  },
+  "13061606045": {
+    "merchant_abn": "13061606045",
+    "name": "Risus Limited",
+    "tags": "artist supply",
+    "revenue_level": "c",
+    "take_rate": "3.09"
+  },
+  "13066244467": {
+    "merchant_abn": "13066244467",
+    "name": "Ac Orci Industries",
+    "tags": "stationery",
+    "revenue_level": "a",
+    "take_rate": "5.69"
+  },
+  "13067850740": {
+    "merchant_abn": "13067850740",
+    "name": "Felis Eget Industries",
+    "tags": "garden supply",
+    "revenue_level": "a",
+    "take_rate": "5.52"
+  },
+  "13086571368": {
+    "merchant_abn": "13086571368",
+    "name": "Enim Diam Vel Industries",
+    "tags": "computer",
+    "revenue_level": "c",
+    "take_rate": "1.88"
+  },
+  "13093581573": {
+    "merchant_abn": "13093581573",
+    "name": "Dis Parturient Corporation",
+    "tags": "gift",
+    "revenue_level": "e",
+    "take_rate": "0.24"
+  },
+  "13103397121": {
+    "merchant_abn": "13103397121",
+    "name": "Litora Torquent Limited",
+    "tags": "watch",
+    "revenue_level": "b",
+    "take_rate": "3.79"
+  },
+  "13106608471": {
+    "merchant_abn": "13106608471",
+    "name": "Sem Vitae PC",
+    "tags": "health",
+    "revenue_level": "a",
+    "take_rate": "6.7"
+  },
+  "13108046922": {
+    "merchant_abn": "13108046922",
+    "name": "Luctus Limited",
+    "tags": "florists",
+    "revenue_level": "b",
+    "take_rate": "3.76"
+  }
+}

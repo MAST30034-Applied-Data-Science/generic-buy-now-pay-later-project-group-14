@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+}
+
+nav {
+  border: rgb(0, 0, 0) solid 0.2rem;
+  color: #1f1f1f;
+  border-radius: 20px;
+  height: 150px;
+  font-size: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(177, 178, 255);
+  border-radius: 20px;
+  height: 80;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+}
+
+.logo-icon {
+  font-size: 38px;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+input[type="search"] {
+  height: 4rem;
+  width: 30rem;
+  padding: 1rem 0 1rem 30px;
+  color: #707070;
+  border: 1px solid transparent;
+  border-radius: 2.4rem;
+  display: block;
+  background: white
+    url("data:image/svg+xml,%3Csvg class='svg-icon search-icon' aria-labelledby='title desc' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.9 19.7'%3E%3Ctitle id='title'%3ESearch Icon%3C/title%3E%3Cdesc id='desc'%3EA magnifying glass icon.%3C/desc%3E%3Cg class='search-path' fill='none' stroke='%23848F91'%3E%3Cpath stroke-linecap='square' d='M18.5 18.3l-5.4-5.4'/%3E%3Ccircle cx='8' cy='8' r='7'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat;
+  background-size: 25px 25px;
+  font-size: 12px;
+  background-position-x: 1rem;
+  background-position-y: 0.6rem;
+}
+
+button {
+  border: none;
+  background-color: black;
+  color: #eef1ff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 5px 8px;
+}
+
+.sub-nav {
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+}
+
+.rank a {
+  padding: 5px;
+}
+
+.trending-up {
+  font-size: 20px;
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+a:hover {
+  text-shadow: 0 1px 5px #7070705e;
+  background-color: rgb(177, 178, 255);
+  border-radius: 8px;
+}
