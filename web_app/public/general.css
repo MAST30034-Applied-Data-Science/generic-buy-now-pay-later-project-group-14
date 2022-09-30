@@ -20,10 +20,11 @@ nav {
   color: #1f1f1f;
   border-radius: 20px;
   height: 150px;
-  font-size: 15px;
+  font-size: 17px;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  margin-top: 32px;
 }
 
 .background {
@@ -124,7 +125,7 @@ a:hover {
 table {
   border-collapse: separate;
   width: 100%;
-  border-spacing: 0 10px;
+  border-spacing: 0 16px;
 }
 
 td {
@@ -153,17 +154,18 @@ MAIN
 **************************/
 main {
   font-size: 14px;
-  margin-top: 12px;
+  margin-top: 32px;
 }
 
 .card {
-  height: 45px;
+  height: 58px;
   margin: 12px 0;
   background-color: #d2daff45;
-  -webkit-transition: scale 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }
 
 .card:hover {
   scale: 1.02;
-  -webkit-transition: scale 0.3s ease-in;
+  background-color: #d2daff81;
+  -webkit-transition: all 0.3s ease-in;
 }
