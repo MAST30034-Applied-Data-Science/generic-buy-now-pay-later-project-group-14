@@ -1,0 +1,24 @@
+<main>
+  <table>
+    <tr class="columns">
+      <th>Rank</th>
+      <th>Merchant</th>
+      <th>Tag</th>
+      <th>FEATURE1</th>
+      <th>FEATURE2</th>
+      <th>FEATURE3</th>
+      <th>Score</th>
+    </tr>
+    {{#each top100}}
+      <tr class="card">
+        <td>{{this.rank}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.tags}}</td>
+        <td>{{this.feature1}}</td>
+        <td>{{this.feature2}}</td>
+        <td>{{this.feature3}}</td>
+        <td>{{this.score}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</main>

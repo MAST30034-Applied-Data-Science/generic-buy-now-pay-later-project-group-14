@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  background-color: #eef1ffce;
+}
+
+header {
+  /* z-index: 10; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+nav {
+  border: rgb(0, 0, 0) solid 0.2rem;
+  color: #1f1f1f;
+  border-radius: 20px;
+  height: 150px;
+  font-size: 17px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.background {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(177, 178, 255);
+  border-radius: 20px;
+  height: 80;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+}
+
+.logo-icon {
+  font-size: 38px;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+input[type="search"] {
+  height: 4rem;
+  width: 30rem;
+  padding: 1rem 0 1rem 30px;
+  color: #707070;
+  border: 1px solid transparent;
+  border-radius: 2.4rem;
+  display: block;
+  background: white
+    url("data:image/svg+xml,%3Csvg class='svg-icon search-icon' aria-labelledby='title desc' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.9 19.7'%3E%3Ctitle id='title'%3ESearch Icon%3C/title%3E%3Cdesc id='desc'%3EA magnifying glass icon.%3C/desc%3E%3Cg class='search-path' fill='none' stroke='%23848F91'%3E%3Cpath stroke-linecap='square' d='M18.5 18.3l-5.4-5.4'/%3E%3Ccircle cx='8' cy='8' r='7'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat;
+  background-size: 25px 25px;
+  font-size: 12px;
+  background-position-x: 1rem;
+  background-position-y: 0.6rem;
+}
+
+button {
+  border: none;
+  background-color: black;
+  color: #eef1ff;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 5px 8px;
+}
+
+.sub-nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.rank {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rank a {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+a:hover {
+  text-shadow: 0 1px 5px #7070705e;
+  background-color: rgb(177, 178, 255);
+  border-radius: 8px;
+  -webkit-transition: all 0.3s ease-in;
+}
+
+.selected {
+  background-color: #b1b2ff;
+  border-radius: 8px;
+}
+
+/**************************
+MAIN
+**************************/
+main {
+  font-size: 14px;
+  margin-top: 32px;
+  /* z-index: 10; */
+}
+
+table {
+  border-collapse: separate;
+  width: 95%;
+  border-spacing: 0 16px;
+  margin: auto;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.columns {
+  margin-top: 12px;
+  font-size: 14px;
+  background-color: #aac4ff98;
+  height: 42px;
+}
+
+.card {
+  height: 58px;
+  margin: 12px 0;
+  background-color: #d2daff86;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+.card:hover {
+  scale: 1.02;
+  -webkit-transition: all 0.3s ease-in;
+}
+
+.select-merchant {
+  background-color: #bfcafb;
+}
