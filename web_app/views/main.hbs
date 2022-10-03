@@ -17,7 +17,10 @@
         <td>{{this.feature1}}</td>
         <td>{{this.feature2}}</td>
         <td>{{this.feature3}}</td>
-        <td>{{this.score}}</td>
+        <td>
+          <progress value={{this.score}} max="100"></progress>
+          <span>{{this.score}}</span>
+        </td>
       </tr>
     {{/each}}
   </table>
