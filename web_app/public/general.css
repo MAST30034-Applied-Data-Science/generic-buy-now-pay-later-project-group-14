@@ -161,6 +161,38 @@ th:last-child {
   border-radius: 0 10px 10px 0;
 }
 
+progress {
+  border: 0;
+  width: 100px;
+  height: 12px;
+  border-radius: 12px;
+}
+
+progress::-webkit-progress-bar {
+  border: 1px solid #707070;
+  height: 12px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+progress::-webkit-progress-value {
+  border: 0;
+  height: 12px;
+  border-radius: 12px;
+  background: #1c3879a4;
+}
+
+progress::-moz-progress-bar {
+  border: 0;
+  height: 12px;
+  border-radius: 12px;
+}
+
+span {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
 .columns {
   margin-top: 12px;
   font-size: 14px;
