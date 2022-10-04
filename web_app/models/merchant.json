@@ -3,7 +3,7 @@
     "rank": 1,
     "name": "Felis Limited",
     "tags": "furniture",
-    "score": 80,
+    "score": 90,
     "feature1": 25648,
     "feature2": 123,
     "feature3": 687.64
@@ -12,7 +12,7 @@
     "rank": 2,
     "name": "Arcu Ac Orci Corporation",
     "tags": "cable",
-    "score": 80,
+    "score": 75,
     "feature1": 25648,
     "feature2": 123,
     "feature3": 687.64
@@ -30,7 +30,7 @@
     "rank": 2,
     "name": "Arcu Ac Orci Corporation",
     "tags": "cable",
-    "score": 80,
+    "score": 20,
     "feature1": 25648,
     "feature2": 123,
     "feature3": 687.64
