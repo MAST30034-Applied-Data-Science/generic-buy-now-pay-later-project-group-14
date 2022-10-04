@@ -35,7 +35,61 @@ const renderHealthService = async (req, res) => {
   }
 };
 
+const renderRecreationalGoods = async (req, res) => {
+  try {
+    const data = await JSON.parse(
+      fs.readFileSync(`${__dirname}/models/recreational_goods.json`)
+    );
+    res.render("main", {
+      layout: "template",
+      data,
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
+
+const renderPersonalHouseHold = async (req, res) => {
+  try {
+    const data = await JSON.parse(
+      fs.readFileSync(`${__dirname}/models/personal_household.json`)
+    );
+    res.render("main", {
+      layout: "template",
+      data,
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
+
+const renderTechnicalMachinery = async (req, res) => {
+  try {
+    const data = await JSON.parse(
+      fs.readFileSync(`${__dirname}/models/technical_machinery.json`)
+    );
+    res.render("main", {
+      layout: "template",
+      data,
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: "fail",
+      message: err,
+    });
+  }
+};
+
 module.exports = {
   renderTop100,
   renderHealthService,
+  renderRecreationalGoods,
+  renderPersonalHouseHold,
+  renderTechnicalMachinery,
 };
