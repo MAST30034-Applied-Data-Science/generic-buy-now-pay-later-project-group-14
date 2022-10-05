@@ -23,4 +23,6 @@ app.get("/", (req, res) => {
 
 app.use("/v1", routers);
 
-app.listen(port, () => console.log(`App listening to port ${port}`));
+app.listen(process.env.PORT || 3000, () => {
+  console.log("The ranking app is running!");
+});
