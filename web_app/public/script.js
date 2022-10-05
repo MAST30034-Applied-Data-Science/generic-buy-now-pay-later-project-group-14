@@ -32,3 +32,24 @@ overlay.addEventListener("click", () => {
     merchant[i].classList.remove("select-merchant");
   }
 });
+
+////////////////////////////
+//FORMAT OF NUMBER PRESENTED
+////////////////////////////
+const round2 = function (originalNum) {
+  return (Math.round(originalNum * 100) / 100).toFixed(2);
+};
+
+const rankNums = document.getElementsByClassName("rankNum");
+const consumerNums = document.getElementsByClassName("consumerNum");
+const numTransaction = document.getElementsByClassName("numTransaction");
+const totalRevenue = document.getElementsByClassName("totalRevenue");
+const scoreNum = document.getElementsByClassName("scoreNum");
+
+for (let i = 0; i < 100; i++) {
+  rankNums[i].textContent = Math.trunc(rankNums[i].textContent);
+  consumerNums[i].textContent = Math.trunc(consumerNums[i].textContent);
+  numTransaction[i].textContent = round2(numTransaction[i].textContent);
+  totalRevenue[i].textContent = round2(totalRevenue[i].textContent);
+  scoreNum[i].textContent = round2(scoreNum[i].textContent);
+}
