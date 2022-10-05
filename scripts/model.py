@@ -42,10 +42,10 @@ def consumer_model(train_df, test_df):
     lr = LinearRegression()
     fitted_model = lr.fit(X_train, y_train)
     y_pred = fitted_model.predict(test_df)
-    test_df['y_pred_total_num_consumer'] = y_pred
+    test_df['pred_total_num_consumer'] = y_pred
 
     # save prediction 
-    result_df = test_df['y_pred_total_num_consumer'].reset_index()
+    result_df = test_df['pred_total_num_consumer'].reset_index()
     result_df.to_csv('../data/curated/pred_total_num_consumer.csv', index=False)
 
 
@@ -61,10 +61,10 @@ def transaction_model(train_df, test_df):
     lr = LinearRegression()
     fitted_model = lr.fit(X_train, y_train)
     y_pred = fitted_model.predict(test_df)
-    test_df['y_pred_total_num_transaction'] = y_pred
+    test_df['pred_total_num_transaction'] = y_pred
 
     # save prediction 
-    result_df = test_df['y_pred_total_num_transaction'].reset_index()
+    result_df = test_df['pred_total_num_transaction'].reset_index()
     result_df.to_csv('../data/curated/pred_total_num_transaction.csv', index=False)
 
 
@@ -84,10 +84,10 @@ def revenue_model(train_df, test_df):
     mlp_reg = MLPRegressor(hidden_layer_sizes=(128,128,128,128),activation="relu" ,solver = 'adam', 
               random_state=0, max_iter=20000).fit(X_trainscaled, y_train)
     y_pred = mlp_reg.predict(X_testscaled)
-    test_df['y_pred_total_revenue'] = y_pred
+    test_df['pred_total_revenue'] = y_pred
 
     # save prediction 
-    result_df = test_df['y_pred_total_revenue'].reset_index()
+    result_df = test_df['pred_total_revenue'].reset_index()
     result_df.to_csv('../data/curated/pred_total_revenue.csv', index=False)
 
 
