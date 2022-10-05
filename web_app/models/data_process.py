@@ -18,9 +18,9 @@ def make_json(csvFilePath, jsonFilePath):
 		jsonf.write(json.dumps(data, indent=4))
 		
 
-csvFilePath = r'models/merchant.csv'
-jsonFilePath = r'models/merchant.json'
+top100CSV = r'models/top100.csv'
+top100JSON = r'models/top100.json'
 
 # Call the make_json function
-make_json(csvFilePath, jsonFilePath)
+make_json(top100CSV, top100JSON)
 

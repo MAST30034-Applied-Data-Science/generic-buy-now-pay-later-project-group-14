@@ -163,7 +163,7 @@ th:last-child {
 
 progress {
   border: 0;
-  width: 100px;
+  width: 86px;
   height: 12px;
   border-radius: 12px;
 }
@@ -189,7 +189,7 @@ progress::-moz-progress-bar {
 }
 
 span {
-  margin-left: 20px;
+  margin-left: 8px;
   font-weight: 600;
 }
 
