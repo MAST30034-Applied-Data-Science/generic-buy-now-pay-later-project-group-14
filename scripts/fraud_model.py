@@ -57,13 +57,13 @@ def feature_engineering(full):
     indexed_features = ['revenue_level', 'tags', 'gender']
     indexers =[]
     for col in indexed_features:
-    indexers.append(StringIndexer(inputCol=col, outputCol = col+"_index"))
+        indexers.append(StringIndexer(inputCol=col, outputCol = col+"_index"))
 
     # one-hot encode the numeric indices
     categorical_features =  ["tags_index", "gender_index","month"]
     ohe = []
     for f in categorical_features:
-    ohe.append(OneHotEncoder(inputCol=f, outputCol=f+"OHE"))
+        ohe.append(OneHotEncoder(inputCol=f, outputCol=f+"OHE"))
     pipeline = Pipeline(stages=[indexers, ohe])
     indexed_result = pipeline.fit(full).transform(full)
 
