@@ -13,6 +13,20 @@ spark = (
 )
 
 def create_features(sdf):
+    """
+    This function produces the final data grouping by each merchant and aggregates to 
+    generalise the features for later model construction
+    Features: total number of consumers
+              average dollar value of each transaction
+              total number of transactions
+              Mean income of consumers of the merchant
+              Revenue Level
+              Total revenue taken from this merchant
+              Total number of postcodes
+              Tags
+    Input: preprocessed dataset
+    Output: aggregated dataset with respect to merchants
+    """
     sdf = sdf.groupBy('merchant_abn')\
       .agg(
          F.countDistinct('consumer_id').alias('total_num_consumer'),
@@ -27,6 +41,14 @@ def create_features(sdf):
     return sdf
 
 def create_label(sdf):
+    """
+    Generate the three key labels that goes into the final ranking
+    Key Labels: Total Number of Consumers for next period
+                  Total Revenue for next period
+                  Total Number of Transactions for next period
+    Input: preprocessed dataset
+    Output: aggregated dataset with label columns
+    """
     label = sdf.groupBy('merchant_abn')\
       .agg(
          F.countDistinct('consumer_id').alias('y_total_num_consumer'),
