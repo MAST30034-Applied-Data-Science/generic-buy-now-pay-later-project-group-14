@@ -8,7 +8,13 @@ from sklearn.neural_network import MLPRegressor
 
 labels = ['y_total_num_consumer', 'y_total_revenue', 'y_total_num_transaction']
 
+
 def preprocess():
+    """
+    This function reads in the train data and test data and leaves only the selected columns for later modelling.
+    Missing values are dropped. 
+    Output: preprocessed Train & Test Dataset
+    """
     # read data
     train_df = pd.read_parquet('../data/curated/train_data/')
     test_df = pd.read_parquet('../data/curated/test_data/')
@@ -31,6 +37,13 @@ def preprocess():
 
 
 def consumer_model(train_df, test_df):
+    '''
+    This function constructs the Linear Regression model for the prediction of number of consumers 
+    in the next period of time
+    Input: preprocessed training and testing dataframe from the function preprocess()
+    Output: csv file including predicted total number of consumers for each merchant, 
+            stored in the directory '../data/curated/pred_total_num_consumer.csv'
+    '''
     # select useful features (exclude revenue_level)
     features = [i for i in train_df.columns if i not in labels and not i.startswith('revenue')]
 
@@ -50,6 +63,13 @@ def consumer_model(train_df, test_df):
 
 
 def transaction_model(train_df, test_df):
+    '''
+    This function constructs the Linear Regression model for the prediction of number of transactions 
+    in the next period of time
+    Input: preprocessed training and testing dataframe from the function preprocess()
+    Output: csv file including predicted total number of transactions for each merchant, 
+            stored in the directory '../data/curated/pred_total_num_transaction.csv'
+    '''
     # select useful features (exclude revenue_level)
     features = [i for i in train_df.columns if i not in labels and not i.startswith('revenue')]
 
@@ -69,6 +89,13 @@ def transaction_model(train_df, test_df):
 
 
 def revenue_model(train_df, test_df):
+    '''
+    This function constructs the Neural Network model for the prediction of tota revenue for each merchant 
+    in the next period of time
+    Input: preprocessed training and testing dataframe from the function preprocess()
+    Output: csv file including predicted total revenue for each merchant, 
+            stored in the directory '../data/curated/pred_total_revenue.csv'
+    '''
     # select useful features 
     features = [i for i in train_df.columns if i not in labels]
     X_train = train_df[features]

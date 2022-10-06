@@ -37,7 +37,7 @@ def create_label(sdf):
 
 
 def main():
-    sdf = spark.read.parquet("../data/curated/full_data_with_fraud/")
+    sdf = spark.read.parquet("../data/curated/full_data_without_fraud/")
 
     # discard fraud transactions
     sdf = sdf.filter(F.col('is_fraud')==0)

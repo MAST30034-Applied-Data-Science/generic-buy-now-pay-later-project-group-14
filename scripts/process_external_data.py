@@ -7,6 +7,9 @@ output_path = "../data/curated/"
 external_output_path = '../data/external/'
 
 def preprocess_postcode():
+    """
+    This function 
+    """
     # read external dataset
     sf = gpd.read_file(external_output_path + "SA2_2021/SA2_2021_AUST_GDA2020.shp")
     sf = sf.set_index('SA2_CODE21')
