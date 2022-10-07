@@ -57,13 +57,8 @@ def feature_engineering(full):
     ohe = []
     for f in categorical_features:
         ohe.append(OneHotEncoder(inputCol=f, outputCol=f+"OHE"))
-<<<<<<< HEAD
-    pipeline = Pipeline(stages=[indexers, ohe])
-    indexed_result = pipeline.fit(full).transform(full)
-=======
     pipeline = Pipeline(stages=indexers + ohe)
     processed_data = pipeline.fit(full).transform(full)
->>>>>>> 875e3a55b48cdb76f5d1a8d1c9e00647529ee394
 
     # feature selection and vectorisation
     feature_selected = ['dollar_value','take_rate','mean_total_income','monthOHE','revenue_level_index','tags_indexOHE','gender_indexOHE']
