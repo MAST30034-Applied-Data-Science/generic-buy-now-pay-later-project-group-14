@@ -8,16 +8,13 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  background: linear-gradient(to bottom, white 12%, #d2daff86);
 }
 
 body {
-  width: 80%;
+  /* width: 80%; */
   margin: auto;
-  background-color: #eef1ffce;
-}
-
-header {
-  /* z-index: 10; */
+  /* background-color: #eef1ffce; */
 }
 
 .overlay {
@@ -38,6 +35,9 @@ nav {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  margin-top: 32px;
+  width: 80%;
+  margin: auto;
   margin-top: 32px;
 }
 
@@ -137,13 +137,14 @@ MAIN
 main {
   font-size: 14px;
   margin-top: 32px;
-  /* z-index: 10; */
+  position: relative;
 }
 
 table {
   border-collapse: separate;
-  width: 95%;
+  width: 75%;
   border-spacing: 0 16px;
+  z-index: 1;
   margin: auto;
 }
 
@@ -163,7 +164,7 @@ th:last-child {
 
 progress {
   border: 0;
-  width: 86px;
+  width: 100px;
   height: 12px;
   border-radius: 12px;
 }
@@ -189,7 +190,7 @@ progress::-moz-progress-bar {
 }
 
 span {
-  margin-left: 8px;
+  margin-left: 20px;
   font-weight: 600;
 }
 
@@ -205,6 +206,7 @@ span {
   margin: 12px 0;
   background-color: #d2daff86;
   -webkit-transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -215,3 +217,134 @@ span {
 .select-merchant {
   background-color: #bfcafb;
 }
+
+tr {
+  position: relative;
+}
+
+.add {
+  position: absolute;
+  right: 200px;
+}
+
+/********************************
+CHARTS
+********************************/
+.chart {
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  width: 1100px !important;
+  height: 640px !important;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 2px 2px 2px #9899f95e;
+  background-color: #bfcafb4b;
+  border-radius: 24px;
+  padding: 15px;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+.btn {
+  right: 15px;
+  top: 10px;
+  position: absolute;
+  width: 20px;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+.overlay-shade {
+  z-index: 1;
+  background: linear-gradient(to bottom, white, #d2daff);
+}
+
+.hide {
+  display: none;
+}
+
+.chart-btn {
+  color: black;
+  background-color: #d2daff86;
+}
+
+/*******************
+drop down
+*******************/
+/* Dropdown Button */
+/* .menu {
+  display: flex;
+  background-color: #b1b2ff;
+  border-radius: 12px;
+  width: 250px;
+  align-items: center;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0 8px;
+}
+
+.centre {
+  margin: auto;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: black;
+  width: 220px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown button on hover & focus */
+/* .menu:hover,
+.menu:focus {
+  background-color: #8c8efc;
+} */
+
+/* The container <div> - needed to position the dropdown content */
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+/* Dropdown Content (Hidden by Default) */
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #b1b2ff89;
+  border-radius: 12px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} */
+
+/* Links inside the dropdown */
+/* .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+
+/* Change color of dropdown links on hover */
+/* .dropdown-content a:hover {
+  background-color: #ddd;
+} */
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* .show {
+  display: block;
+} */
