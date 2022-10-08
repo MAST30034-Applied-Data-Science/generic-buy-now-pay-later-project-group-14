@@ -1,0 +1,57 @@
+<main>
+  {{! <div class="overlay overlay-shade"></div> }}
+  <table>
+    <tr class="columns">
+      <th>Rank</th>
+      <th>Merchant</th>
+      <th>Tag</th>
+      <th>Number of <br />consumer</th>
+      <th>Number of <br />transaction</th>
+      <th>Revenue</th>
+      <th>Score</th>
+    </tr>
+    {{#each data}}
+      <tr class="card">
+        <td class="rankNum">{{this.rank}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.tags}}</td>
+        <td class="consumerNum">{{this.pred_total_num_consumer}}</td>
+        <td class="numTransaction">{{this.pred_total_num_transaction}}</td>
+        <td class="totalRevenue">{{this.pred_total_revenue}}</td>
+        <td>
+          <progress value={{this.score}} max="100"></progress>
+          <span class="scoreNum">{{this.score}}</span>
+        </td>
+      </tr>
+      <div class="chart hide">
+        <div class="dropdown">
+          <div class="menu"><button onclick="myFunction()" class="dropbtn"><p
+                class="centre"
+              >BNPL revenue</p>
+            </button>
+            <img
+              src="/img/icons8-sort-down-60.png"
+              width="15px"
+              height="15px"
+            /></div>
+
+          <div id="myDropdown" class="dropdown-content">
+            <a class="option" href="#">BNPL revenue</a>
+            <a class="option" href="#">Number of consumers</a>
+            <a class="option" href="#">Number of transactions</a>
+          </div>
+        </div>
+        <canvas id="line-chart">
+          <span class="data1">{{this.data1.x}}</span>
+          <span class="data2">{{this.data2.x}}</span>
+          <span class="data3">{{this.data3.x}}</span>
+        </canvas>
+        <img class="btn" src="/img/211652_close_icon.png" />
+      </div>
+    {{/each}}
+  </table>
+  <div class="overlay"></div>
+
+</main>
+
+<script src="/top100.js"></script>

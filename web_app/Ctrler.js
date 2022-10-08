@@ -1,4 +1,3 @@
-const {Template} = require("ejs");
 const fs = require("fs");
 
 const renderTop100 = async (req, res) => {
@@ -6,7 +5,7 @@ const renderTop100 = async (req, res) => {
     const data = await JSON.parse(
       fs.readFileSync(`${__dirname}/models/top100.json`)
     );
-    res.render("main", {
+    res.render("top100", {
       layout: "template",
       data,
     });
@@ -21,9 +20,9 @@ const renderTop100 = async (req, res) => {
 const renderHealthService = async (req, res) => {
   try {
     const data = await JSON.parse(
-      fs.readFileSync(`${__dirname}/models/health_service.json`)
+      fs.readFileSync(`${__dirname}/models/health_top10.json`)
     );
-    res.render("main", {
+    res.render("otherTags", {
       layout: "template",
       data,
     });
@@ -38,9 +37,9 @@ const renderHealthService = async (req, res) => {
 const renderRecreationalGoods = async (req, res) => {
   try {
     const data = await JSON.parse(
-      fs.readFileSync(`${__dirname}/models/recreational_goods.json`)
+      fs.readFileSync(`${__dirname}/models/recreational_top10.json`)
     );
-    res.render("main", {
+    res.render("otherTags", {
       layout: "template",
       data,
     });
@@ -55,9 +54,9 @@ const renderRecreationalGoods = async (req, res) => {
 const renderPersonalHouseHold = async (req, res) => {
   try {
     const data = await JSON.parse(
-      fs.readFileSync(`${__dirname}/models/personal_household.json`)
+      fs.readFileSync(`${__dirname}/models/personal_top10.json`)
     );
-    res.render("main", {
+    res.render("otherTags", {
       layout: "template",
       data,
     });
@@ -72,9 +71,9 @@ const renderPersonalHouseHold = async (req, res) => {
 const renderTechnicalMachinery = async (req, res) => {
   try {
     const data = await JSON.parse(
-      fs.readFileSync(`${__dirname}/models/technical_machinery.json`)
+      fs.readFileSync(`${__dirname}/models/technical_top10.json`)
     );
-    res.render("main", {
+    res.render("otherTags", {
       layout: "template",
       data,
     });
