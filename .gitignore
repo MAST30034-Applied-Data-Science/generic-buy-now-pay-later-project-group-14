@@ -139,6 +139,3 @@ data/external/
 
 # OSX .DS_Store file
 .DS_Store
-
-#web app
-web_app/node_modules/

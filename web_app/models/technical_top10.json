@@ -6,13 +6,13 @@
     "tags": "cable",
     "revenue_level": "a",
     "take_rate": "6.1",
-    "pred_total_num_consumer": "22427.261711782096",
-    "pred_total_num_transaction": "81994.38346125103",
-    "pred_total_revenue": "36715890.20747443",
-    "scaled_pred_total_num_consumer": "99.82683756542818",
-    "scaled_pred_total_num_transaction": "41.15363413246736",
-    "scaled_pred_total_revenue": "85.48734517333",
-    "score": "76.48907957870065",
+    "pred_total_num_consumer": "22388.33244492244",
+    "pred_total_num_transaction": "81951.88624517512",
+    "pred_total_revenue": "37059751.36155263",
+    "scaled_pred_total_num_consumer": "99.8251405847902",
+    "scaled_pred_total_num_transaction": "41.140163415429065",
+    "scaled_pred_total_revenue": "90.58929301971659",
+    "score": "78.52530840795242",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -42,13 +42,13 @@
     "tags": "computer",
     "revenue_level": "c",
     "take_rate": "3.05",
-    "pred_total_num_consumer": "22179.48032187922",
-    "pred_total_num_transaction": "123795.66520385689",
-    "pred_total_revenue": "14821895.210946152",
-    "scaled_pred_total_num_consumer": "98.72392839713788",
-    "scaled_pred_total_num_transaction": "62.13403038017325",
-    "scaled_pred_total_revenue": "34.51052023690642",
-    "score": "62.061595727955904",
+    "pred_total_num_consumer": "22166.15167816213",
+    "pred_total_num_transaction": "123782.0074820321",
+    "pred_total_revenue": "14864036.884972852",
+    "scaled_pred_total_num_consumer": "98.8344805465025",
+    "scaled_pred_total_num_transaction": "62.13904583557377",
+    "scaled_pred_total_revenue": "36.33382695129522",
+    "score": "62.825588695140965",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -72,19 +72,19 @@
     }
   },
   "96680767841": {
-    "rank": "23.0",
+    "rank": "20.0",
     "merchant_abn": "96680767841",
     "name": "Ornare Limited",
     "tags": "motor",
     "revenue_level": "a",
     "take_rate": "5.91",
-    "pred_total_num_consumer": "13358.259421030822",
-    "pred_total_num_transaction": "20437.63852850356",
-    "pred_total_revenue": "32805360.306611124",
-    "scaled_pred_total_num_consumer": "59.45945655414265",
-    "scaled_pred_total_num_transaction": "10.257813560256038",
-    "scaled_pred_total_revenue": "76.3822732941883",
-    "score": "51.468090351994924",
+    "pred_total_num_consumer": "13317.672418549731",
+    "pred_total_num_transaction": "20392.76996333328",
+    "pred_total_revenue": "40909637.47060776",
+    "scaled_pred_total_num_consumer": "59.38086388141962",
+    "scaled_pred_total_num_transaction": "10.237249283986776",
+    "scaled_pred_total_revenue": "100.0",
+    "score": "60.88543394962191",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -114,13 +114,13 @@
     "tags": "computer",
     "revenue_level": "b",
     "take_rate": "4.8",
-    "pred_total_num_consumer": "15347.860797825791",
-    "pred_total_num_transaction": "25516.439229890235",
-    "pred_total_revenue": "27011890.97580216",
-    "scaled_pred_total_num_consumer": "68.31544691149071",
-    "scaled_pred_total_num_transaction": "12.806904084186378",
-    "scaled_pred_total_revenue": "62.89306440846332",
-    "score": "49.49393106208845",
+    "pred_total_num_consumer": "15319.165158624211",
+    "pred_total_num_transaction": "25484.56171311689",
+    "pred_total_revenue": "30486833.448705044",
+    "scaled_pred_total_num_consumer": "68.30512363363201",
+    "scaled_pred_total_num_transaction": "12.79334840825512",
+    "scaled_pred_total_revenue": "74.52237500420003",
+    "score": "54.13849161424615",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -143,56 +143,20 @@
       ]
     }
   },
-  "67400260923": {
-    "rank": "29.0",
-    "merchant_abn": "67400260923",
-    "name": "Eleifend PC",
-    "tags": "computer",
-    "revenue_level": "a",
-    "take_rate": "5.97",
-    "pred_total_num_consumer": "15703.501465096531",
-    "pred_total_num_transaction": "25799.417586840584",
-    "pred_total_revenue": "23661308.708884645",
-    "scaled_pred_total_num_consumer": "69.8984526114084",
-    "scaled_pred_total_num_transaction": "12.948933175420962",
-    "scaled_pred_total_revenue": "55.09174511142212",
-    "score": "46.89091378061766",
-    "segment": "technical & machinery service",
-    "BNPL_revenue": {
-      "x": [
-        1300453.98, 1308109.04, 1519275.09, 1541659.53, 1564596.32, 1662253.73,
-        1598717.78, 1627156.5, 2376476.14, 2313872.67, 1332806.87, 1257809.83,
-        1516044.25, 1629321.22, 1717388.33, 1809134.23, 1904470.43, 1893868.91,
-        1905867.07, 1791606.91
-      ]
-    },
-    "num_transaction": {
-      "x": [
-        1445, 1464, 1715, 1720, 1773, 1854, 1798, 1858, 2675, 2600, 1423, 1424,
-        1670, 1825, 1886, 2015, 2124, 2116, 2166, 1931
-      ]
-    },
-    "num_consumer": {
-      "x": [
-        1404, 1427, 1660, 1660, 1702, 1782, 1744, 1789, 2527, 2464, 1380, 1389,
-        1615, 1756, 1812, 1952, 2029, 2023, 2064, 1851
-      ]
-    }
-  },
   "94690988633": {
-    "rank": "31.0",
+    "rank": "28.0",
     "merchant_abn": "94690988633",
     "name": "Eu Placerat LLC",
     "tags": "computer",
     "revenue_level": "a",
     "take_rate": "6.16",
-    "pred_total_num_consumer": "13895.359161907923",
-    "pred_total_num_transaction": "21106.1403912736",
-    "pred_total_revenue": "25066594.194246832",
-    "scaled_pred_total_num_consumer": "61.85016163789367",
-    "scaled_pred_total_num_transaction": "10.59333996969983",
-    "scaled_pred_total_revenue": "58.363737828345855",
-    "score": "45.07854561361639",
+    "pred_total_num_consumer": "13871.663675364363",
+    "pred_total_num_transaction": "21079.756404555843",
+    "pred_total_revenue": "27024350.037295185",
+    "scaled_pred_total_num_consumer": "61.85100118308397",
+    "scaled_pred_total_num_transaction": "10.582119130807955",
+    "scaled_pred_total_revenue": "66.05863974402438",
+    "score": "48.153391991777326",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -215,20 +179,56 @@
       ]
     }
   },
+  "67400260923": {
+    "rank": "30.0",
+    "merchant_abn": "67400260923",
+    "name": "Eleifend PC",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "5.97",
+    "pred_total_num_consumer": "15686.212569486435",
+    "pred_total_num_transaction": "25780.04302144202",
+    "pred_total_revenue": "23436467.49458443",
+    "scaled_pred_total_num_consumer": "69.94171534856854",
+    "scaled_pred_total_num_transaction": "12.94168116626307",
+    "scaled_pred_total_revenue": "57.2883773693247",
+    "score": "47.78036990217936",
+    "segment": "technical & machinery service",
+    "BNPL_revenue": {
+      "x": [
+        1300453.98, 1308109.04, 1519275.09, 1541659.53, 1564596.32, 1662253.73,
+        1598717.78, 1627156.5, 2376476.14, 2313872.67, 1332806.87, 1257809.83,
+        1516044.25, 1629321.22, 1717388.33, 1809134.23, 1904470.43, 1893868.91,
+        1905867.07, 1791606.91
+      ]
+    },
+    "num_transaction": {
+      "x": [
+        1445, 1464, 1715, 1720, 1773, 1854, 1798, 1858, 2675, 2600, 1423, 1424,
+        1670, 1825, 1886, 2015, 2124, 2116, 2166, 1931
+      ]
+    },
+    "num_consumer": {
+      "x": [
+        1404, 1427, 1660, 1660, 1702, 1782, 1744, 1789, 2527, 2464, 1380, 1389,
+        1615, 1756, 1812, 1952, 2029, 2023, 2064, 1851
+      ]
+    }
+  },
   "58454491168": {
-    "rank": "35.0",
+    "rank": "32.0",
     "merchant_abn": "58454491168",
     "name": "Diam At Foundation",
     "tags": "computer",
     "revenue_level": "a",
     "take_rate": "6.01",
-    "pred_total_num_consumer": "12295.206852456968",
-    "pred_total_num_transaction": "17815.29968383584",
-    "pred_total_revenue": "25534719.295506787",
-    "scaled_pred_total_num_consumer": "54.7276628358403",
-    "scaled_pred_total_num_transaction": "8.941640807572156",
-    "scaled_pred_total_revenue": "59.45369566103278",
-    "score": "42.88226935743685",
+    "pred_total_num_consumer": "12268.134585167883",
+    "pred_total_num_transaction": "17785.244472750892",
+    "pred_total_revenue": "28815144.20183818",
+    "scaled_pred_total_num_consumer": "54.70118253292507",
+    "scaled_pred_total_num_transaction": "8.928261416745682",
+    "scaled_pred_total_revenue": "70.43607810638977",
+    "score": "47.26326442745714",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -251,6 +251,42 @@
       ]
     }
   },
+  "45433476494": {
+    "rank": "38.0",
+    "merchant_abn": "45433476494",
+    "name": "Adipiscing Elit Foundation",
+    "tags": "computer",
+    "revenue_level": "a",
+    "take_rate": "5.82",
+    "pred_total_num_consumer": "8061.341422928857",
+    "pred_total_num_transaction": "10323.127103533789",
+    "pred_total_revenue": "30403223.64414381",
+    "scaled_pred_total_num_consumer": "35.9439249361501",
+    "scaled_pred_total_num_transaction": "5.182249676683052",
+    "scaled_pred_total_revenue": "74.31799821249342",
+    "score": "42.06505166884731",
+    "segment": "technical & machinery service",
+    "BNPL_revenue": {
+      "x": [
+        1486550.71, 1679649.08, 1945651.73, 1902128.88, 1815940.43, 1843011.09,
+        2109413.35, 2093657.04, 3000611.34, 2892548.25, 1514410.61, 1627073.9,
+        1833124.0, 1994074.67, 2213527.35, 2201685.61, 2261334.73, 2535686.15,
+        2539995.94, 2127796.28
+      ]
+    },
+    "num_transaction": {
+      "x": [
+        578, 634, 718, 736, 688, 694, 820, 795, 1156, 1099, 588, 622, 703, 754,
+        852, 836, 863, 958, 931, 812
+      ]
+    },
+    "num_consumer": {
+      "x": [
+        567, 626, 703, 729, 671, 681, 804, 782, 1139, 1075, 579, 614, 698, 743,
+        831, 822, 849, 939, 918, 793
+      ]
+    }
+  },
   "80518954462": {
     "rank": "39.0",
     "merchant_abn": "80518954462",
@@ -258,13 +294,13 @@
     "tags": "computer",
     "revenue_level": "b",
     "take_rate": "3.49",
-    "pred_total_num_consumer": "13433.74300429979",
-    "pred_total_num_transaction": "19968.55797133409",
-    "pred_total_revenue": "20050350.04256853",
-    "scaled_pred_total_num_consumer": "59.79544440244466",
-    "scaled_pred_total_num_transaction": "10.022378292454684",
-    "scaled_pred_total_revenue": "46.68417911834289",
-    "score": "39.61901845580696",
+    "pred_total_num_consumer": "13416.908168511638",
+    "pred_total_num_transaction": "19949.710208403438",
+    "pred_total_revenue": "20965967.12783954",
+    "scaled_pred_total_num_consumer": "59.82333643784403",
+    "scaled_pred_total_num_transaction": "10.01483157579538",
+    "scaled_pred_total_revenue": "51.24945715518233",
+    "score": "41.451233266164756",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
@@ -287,56 +323,20 @@
       ]
     }
   },
-  "17488304283": {
-    "rank": "49.0",
-    "merchant_abn": "17488304283",
-    "name": "Posuere Cubilia Curae Corporation",
-    "tags": "cable",
-    "revenue_level": "a",
-    "take_rate": "6.18",
-    "pred_total_num_consumer": "14833.881547021032",
-    "pred_total_num_transaction": "23201.96729595052",
-    "pred_total_revenue": "14058794.507610103",
-    "scaled_pred_total_num_consumer": "66.02765432042588",
-    "scaled_pred_total_num_transaction": "11.645252186111776",
-    "scaled_pred_total_revenue": "32.73375674678085",
-    "score": "36.39537465067364",
-    "segment": "technical & machinery service",
-    "BNPL_revenue": {
-      "x": [
-        771853.87, 789941.65, 903073.71, 880815.23, 972293.05, 965349.7,
-        994512.66, 1087951.14, 1378231.37, 1376674.68, 809755.22, 783579.05,
-        931702.03, 973656.4, 1119853.06, 1085538.07, 1169849.49, 1222357.84,
-        1194357.33, 1056099.31
-      ]
-    },
-    "num_transaction": {
-      "x": [
-        1294, 1322, 1490, 1482, 1606, 1610, 1638, 1742, 2298, 2287, 1348, 1315,
-        1549, 1621, 1837, 1795, 1914, 2016, 1943, 1739
-      ]
-    },
-    "num_consumer": {
-      "x": [
-        1258, 1288, 1444, 1438, 1549, 1549, 1588, 1690, 2180, 2174, 1308, 1280,
-        1508, 1568, 1767, 1742, 1838, 1938, 1848, 1676
-      ]
-    }
-  },
   "13514558491": {
-    "rank": "50.0",
+    "rank": "40.0",
     "merchant_abn": "13514558491",
     "name": "Magna Praesent PC",
     "tags": "motor",
     "revenue_level": "a",
     "take_rate": "6.78",
-    "pred_total_num_consumer": "9261.06221788785",
-    "pred_total_num_transaction": "12024.15849919295",
-    "pred_total_revenue": "23731916.042125408",
-    "scaled_pred_total_num_consumer": "41.22226625744193",
-    "scaled_pred_total_num_transaction": "6.03502092140781",
-    "scaled_pred_total_revenue": "55.25614350771356",
-    "score": "36.279643556740346",
+    "pred_total_num_consumer": "9233.105664094068",
+    "pred_total_num_transaction": "11993.239588134868",
+    "pred_total_revenue": "27704425.871130258",
+    "scaled_pred_total_num_consumer": "41.168589631223256",
+    "scaled_pred_total_num_transaction": "6.020652594378944",
+    "scaled_pred_total_revenue": "67.721025127722",
+    "score": "41.245182718769456",
     "segment": "technical & machinery service",
     "BNPL_revenue": {
       "x": [
