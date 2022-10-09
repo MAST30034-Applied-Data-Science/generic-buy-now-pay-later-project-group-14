@@ -64,7 +64,7 @@ def preprocess_income():
     state_income.set_axis(['state', 'mean_total_income'], axis=1, inplace=True)
     state_income.to_csv(output_path + "state_mean_income.csv", index=False)
 
-    # TODO: need more comments HERE
+    # extract mean income of each SA2 region
     df.columns = df.iloc[5].values.flatten().tolist()
     df = df.drop(df.index[0:6], inplace=False).reset_index(drop=True)
     df = (df.iloc[:, [0, 26]])
@@ -73,7 +73,7 @@ def preprocess_income():
 
     # temporarily replace missing values with 0
     df.replace({'mean_total_income': {'np': 0}}, inplace=True)
-    # ignore state mean income 
+    df['mean_total_income'] = df['mean_total_income'].clip(lower=0)
     df = df.dropna().reset_index(drop = True)
 
     # save the processed data
