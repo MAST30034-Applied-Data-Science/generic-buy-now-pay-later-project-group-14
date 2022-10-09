@@ -93,10 +93,10 @@ def model(processed_data):
 
     # balance distribution of two classes and shuffle the dataset randomly
     fraud_data = train_data.filter(F.col('is_fraud') == 1)
-    normal_data = train_data.filter(F.col('is_fraud') == 0).randomSplit([0.01,0.99])[0]
+    normal_data = train_data.filter(F.col('is_fraud') == 0).randomSplit([0.01,0.99], 0)[0]
     train_data = fraud_data.union(normal_data).orderBy(rand())
 
-    # use logistic regression to predict fraud transactions after 2020-02
+    # use logistic regression to predict fraud transactions after 2022-02
     lr = LogisticRegression(labelCol='is_fraud')
     fitted_model = lr.fit(train_data)
     fitted_model.setFeaturesCol("features")
