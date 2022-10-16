@@ -32,7 +32,7 @@ def merge_data():
     """
     This function merges the predictions for the three labels with the merchant information
     for the final scoring and ranking. Missing values are filled with 0 in case we do not lose
-    any merchants
+    any merchants.
     Output: The merged dataset
     """
     # read data
@@ -55,7 +55,7 @@ def merge_data():
 def cal_score_rank(df_merged):
     """
     For each label, we normalise the predictions and sum them up with decided weights. Then we choose
-    the top 100 merchants and scale their score into the range of (0, 100)
+    the top 100 merchants and scale their score into the range of (0, 100).
     Output: Top 100 merchants with their information, label values, scores and ranking
             stored in the directory "../data/curated/top100.csv"
     """

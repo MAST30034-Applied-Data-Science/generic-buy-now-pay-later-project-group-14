@@ -31,8 +31,8 @@ def merge():
     """
     This function merges all the provided dataset and the external dataset together and stores the final full data for
     later use.
-    The datasets that are merged together: Consumer dataset, Transaction dataset, Postcode SA2 dataset, 
-                                            Income dataset, Merchant dataset, State Income dataset
+    The datasets that are merged together: Consumer, Transaction, Postcode-SA2 lookup, 
+                                            Income, Merchant, State mean total income. 
     Final output data is in terms of SA2 regions
     Output: Final fully merged dataset stored in the directory "data/curated/full_data"
     """
@@ -73,9 +73,9 @@ def merge():
 
 def preprocess_merchant():
     """
-    This function preprocesses the Merchant dataset
-    Tags are extracted into simpler form
-    Take Rates and Revenue Levels are extracted
+    This function preprocesses the Merchant dataset.
+    Tags are extracted into simpler form.
+    Take Rates and Revenue Levels are extracted.
     Output: Final processed Merchant dataset are stored in the directory "data/curated/merchant.csv"
     """
     df = pd.read_parquet(merchant_path)
@@ -105,7 +105,7 @@ def preprocess_merchant():
 def preprocess_consumer():
     """
     This function preprocesses the Consumer dataset by combining user id with consumer id that are used
-    in different datasets. Drop any irrelevant features that are not useful in further analysis
+    in different datasets. Drop any irrelevant features that are not useful in further analysis.
     Output: The final preprocesses Consumer dataset are stored in the directory "data/curated/consumer"
     """
     consumer_sdf = spark.read.option("delimiter", "|").csv(consumer_path, inferSchema =True, header=True)

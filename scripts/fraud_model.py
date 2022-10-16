@@ -20,9 +20,8 @@ spark = (
 
 def preprocess(full, probs_merchant, probs_consumer): 
     """
-    This function merges our previous full dataset [output of join_table.py] with the given fraud delta file
-    All missing values are given the default fraud probability of 0.01
-    Discard the fraud with benchmark
+    This function merges our previous full dataset with the given fraud delta file.
+    All missing values are given the default fraud probability of 0.01.
     Input: Full dataset, Fraud delta file of merchants, Fraud delta file of consumers
     Output: Merged full dataset
     """
@@ -54,8 +53,8 @@ def preprocess(full, probs_merchant, probs_consumer):
 
 def feature_engineering(full):
     """
-    This function preprocess the features used to predict the fraud probability of future period of time
-    Categorical features are indexed and one-hot-encoded
+    This function preprocess the features used to predict the fraud probability of future period of time.
+    Categorical features are indexed and one-hot-encoded.
     Input: full dataset
     Output: preprocessed full dataset
     """
@@ -83,8 +82,8 @@ def feature_engineering(full):
 
 def model(processed_data):
     """
-    This function builds up a logistic regression model used to predict the fraud probability
-    of each transaction of the next period of time
+    This function builds a logistic regression model to predict the fraud probability
+    of each transaction of the next period of time.
     Input: Preprocessed full dataset from feature_engineering()
     Output: Predicted dataset
     """

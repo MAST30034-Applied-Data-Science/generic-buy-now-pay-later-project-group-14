@@ -39,7 +39,7 @@ def preprocess():
 def consumer_model(train_df, test_df):
     '''
     This function constructs the Linear Regression model for the prediction of number of consumers 
-    in the next period of time
+    in the next period of time.
     Input: preprocessed training and testing dataframe from the function preprocess()
     Output: csv file including predicted total number of consumers for each merchant, 
             stored in the directory '../data/curated/pred_total_num_consumer.csv'
@@ -65,7 +65,7 @@ def consumer_model(train_df, test_df):
 def transaction_model(train_df, test_df):
     '''
     This function constructs the Linear Regression model for the prediction of number of transactions 
-    in the next period of time
+    in the next period of time.
     Input: preprocessed training and testing dataframe from the function preprocess()
     Output: csv file including predicted total number of transactions for each merchant, 
             stored in the directory '../data/curated/pred_total_num_transaction.csv'
@@ -91,7 +91,7 @@ def transaction_model(train_df, test_df):
 def revenue_model(train_df, test_df):
     '''
     This function constructs the Neural Network model for the prediction of tota revenue for each merchant 
-    in the next period of time
+    in the next period of time.
     Input: preprocessed training and testing dataframe from the function preprocess()
     Output: csv file including predicted total revenue for each merchant, 
             stored in the directory '../data/curated/pred_total_revenue.csv'
