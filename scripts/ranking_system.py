@@ -73,6 +73,9 @@ def cal_score_rank(df_merged):
     # split merchants into 4 segments
     df_merged['segment'] = df_merged['tags'].map(segment)
 
+    # save full ranking
+    df_merged.to_csv('../data/curated/ranking.csv')
+
     # find top 100 merchants overall
     top100 = df_merged.loc[df_merged.index <= 100]
     top100.to_csv('../data/curated/top100.csv')
