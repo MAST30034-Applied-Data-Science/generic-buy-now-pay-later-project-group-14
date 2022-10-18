@@ -20,10 +20,13 @@ spark = (
 
 def preprocess(full, probs_merchant, probs_consumer): 
     """
-    This function merges our previous full dataset with the given fraud delta file.
-    All missing values are given the default fraud probability of 0.01.
-    Input: Full dataset, Fraud delta file of merchants, Fraud delta file of consumers
-    Output: Merged full dataset
+    This function merges the full dataset with the given fraud delta files.
+    All transactions are classified as fraud and not fraud with a benchmark at 5%.
+
+    :param full: full dataset
+    :param probs_merchant: fraud delta file of merchants
+    :param probs_consumer: fraud delta file of consumers
+    :returns: merged full dataset
     """
     # convert features to appropriate data types
     probs_consumer =  probs_consumer.withColumn('user_id', F.col('user_id').cast('long'))\
@@ -53,10 +56,10 @@ def preprocess(full, probs_merchant, probs_consumer):
 
 def feature_engineering(full):
     """
-    This function preprocess the features used to predict the fraud probability of future period of time.
-    Categorical features are indexed and one-hot-encoded.
-    Input: full dataset
-    Output: preprocessed full dataset
+    This function converts all categorical features into continuous or ordinal features by indexing and one-hot encoding.
+
+    :param full: full dataset
+    :returns: preprocessed full dataset
     """
     # give all values in non-numeric features an index in order to make it ordinal or one-hot encoded
     indexed_features = ['revenue_level', 'tags', 'gender']
@@ -84,8 +87,9 @@ def model(processed_data):
     """
     This function builds a logistic regression model to predict the fraud probability
     of each transaction of the next period of time.
-    Input: Preprocessed full dataset from feature_engineering()
-    Output: Predicted dataset
+
+    :param processed_data: preprocessed full dataset
+    :returns: predictions
     """
     train_data = processed_data.filter(F.col('order_datetime') < '2022-02-28')
     predict_data = processed_data.filter(F.col('order_datetime') >= '2022-02-28')   
@@ -111,24 +115,19 @@ def model(processed_data):
     return predicted
     
 
-def main():
-    # read in merged dataset and delta files
-    full = spark.read.parquet("../data/curated/full_data/")
-    probs_merchant = spark.read.option('header', True).csv('../data/tables/merchant_fraud_probability.csv')
-    probs_consumer= spark.read.option('header', True).csv('../data/tables/consumer_fraud_probability.csv') 
+# read in merged dataset and delta files
+full = spark.read.parquet("../data/curated/full_data/")
+probs_merchant = spark.read.option('header', True).csv('../data/tables/merchant_fraud_probability.csv')
+probs_consumer= spark.read.option('header', True).csv('../data/tables/consumer_fraud_probability.csv') 
 
-    full = preprocess(full, probs_merchant, probs_consumer)
-    processed_data = feature_engineering(full)
-    predicted = model(processed_data)
+full = preprocess(full, probs_merchant, probs_consumer)
+processed_data = feature_engineering(full)
+predicted = model(processed_data)
 
-    # combine training data and predicted data
-    full = full.drop('merchant_prob', 'consumer_prob', 'month')
-    full = full.filter(F.col('order_datetime') < '2022-02-28')
-    full = full.union(predicted)
-    full = full.withColumn("is_fraud", F.col("is_fraud").cast("INT"))
+# combine training data and predicted data
+full = full.drop('merchant_prob', 'consumer_prob', 'month')
+full = full.filter(F.col('order_datetime') < '2022-02-28')
+full = full.union(predicted)
+full = full.withColumn("is_fraud", F.col("is_fraud").cast("INT"))
 
-    full.write.format('parquet').mode('overwrite').save("../data/curated/full_data_without_fraud")
-
-
-main()
-
+full.write.format('parquet').mode('overwrite').save("../data/curated/full_data_without_fraud")

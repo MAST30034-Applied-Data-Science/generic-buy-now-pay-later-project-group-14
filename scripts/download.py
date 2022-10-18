@@ -13,8 +13,7 @@ url_total_income = "https://www.abs.gov.au/statistics/labour/earnings-and-workin
 
 def download_external_data():
     """
-    This function downloads the external dataset that are helpful in this project with the given url.
-    The external dataset are stored in the directory of external_output_path.
+    This function downloads the external dataset with given urls.
     """
     # check if the output directory exists
     if not os.path.exists(external_output_path):

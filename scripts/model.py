@@ -11,9 +11,10 @@ labels = ['y_total_num_consumer', 'y_total_revenue', 'y_total_num_transaction']
 
 def preprocess():
     """
-    This function reads in the train data and test data and leaves only the selected columns for later modelling.
-    Missing values are dropped. 
-    Output: preprocessed Train & Test Dataset
+    This function reads in training and test data and leaves only the selected features for modelling later.
+    Any instances with missing values are dropped. 
+
+    :returns: preprocessed train & test dataset
     """
     # read data
     train_df = pd.read_parquet('../data/curated/train_data/')
@@ -38,11 +39,11 @@ def preprocess():
 
 def consumer_model(train_df, test_df):
     '''
-    This function constructs the Linear Regression model for the prediction of number of consumers 
-    in the next period of time.
-    Input: preprocessed training and testing dataframe from the function preprocess()
-    Output: csv file including predicted total number of consumers for each merchant, 
-            stored in the directory '../data/curated/pred_total_num_consumer.csv'
+    This function constructs a Linear Regression model for the prediction of number of consumers 
+    in the next period of time. Predicted value will be saved in '../data/curated/pred_total_num_consumer.csv'.
+
+    :param train_df: preprocessed training data
+    :param test_df: preprocessed test data
     '''
     # select useful features (exclude revenue_level)
     features = [i for i in train_df.columns if i not in labels and not i.startswith('revenue')]
@@ -64,11 +65,11 @@ def consumer_model(train_df, test_df):
 
 def transaction_model(train_df, test_df):
     '''
-    This function constructs the Linear Regression model for the prediction of number of transactions 
-    in the next period of time.
-    Input: preprocessed training and testing dataframe from the function preprocess()
-    Output: csv file including predicted total number of transactions for each merchant, 
-            stored in the directory '../data/curated/pred_total_num_transaction.csv'
+    This function constructs a Linear Regression model for the prediction of number of transactions 
+    in the next period of time. Predicted value will be saved in '../data/curated/pred_total_num_transaction.csv'.
+
+    :param train_df: preprocessed training data
+    :param test_df: preprocessed test data
     '''
     # select useful features (exclude revenue_level)
     features = [i for i in train_df.columns if i not in labels and not i.startswith('revenue')]
@@ -90,11 +91,11 @@ def transaction_model(train_df, test_df):
 
 def revenue_model(train_df, test_df):
     '''
-    This function constructs the Neural Network model for the prediction of tota revenue for each merchant 
-    in the next period of time.
-    Input: preprocessed training and testing dataframe from the function preprocess()
-    Output: csv file including predicted total revenue for each merchant, 
-            stored in the directory '../data/curated/pred_total_revenue.csv'
+    This function constructs a Multi-layer perceptron for the prediction of tota revenue for each merchant 
+    in the next period of time. Predicted value will be saved in '../data/curated/pred_total_revenue.csv'.
+
+    :param train_df: preprocessed training data
+    :param test_df: preprocessed test data
     '''
     # select useful features 
     features = [i for i in train_df.columns if i not in labels]
@@ -118,11 +119,7 @@ def revenue_model(train_df, test_df):
     result_df.to_csv('../data/curated/pred_total_revenue.csv', index=False)
 
 
-def main():
-    train_df, test_df = preprocess()
-    consumer_model(train_df, test_df)
-    transaction_model(train_df, test_df)
-    revenue_model(train_df, test_df)
-
-
-main()
+train_df, test_df = preprocess()
+consumer_model(train_df, test_df)
+transaction_model(train_df, test_df)
+revenue_model(train_df, test_df)

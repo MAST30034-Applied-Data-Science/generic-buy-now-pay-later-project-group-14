@@ -8,9 +8,9 @@ external_output_path = '../data/external/'
 
 def preprocess_postcode():
     """
-    This function preprocesses the postcode dataset, extracting the latitude and longitude of 
-    each postcode region and merges it with the corresponding SA2 region.
-    Output: the preprocessed dataset is stored in the directory "../data/curated/processed_postcode.csv"
+    This function preprocesses the postcode dataset by extracting the latitude and longitude of 
+    each postcode region and matching it with the corresponding SA2 region.
+    The preprocessed dataset will be stored in "../data/curated/processed_postcode.csv"
     """
     # read external dataset
     sf = gpd.read_file(external_output_path + "SA2_2021/SA2_2021_AUST_GDA2020.shp")
@@ -31,14 +31,14 @@ def preprocess_postcode():
     # save the processed data
     all_postcodes.to_csv(output_path + "processed_postcode.csv", index=False)
 
+
 def postcode_to_SA2(df, sf):
     """
-    This function looks for the SA2 region with the same (latitude, longitude) as a given postcode region.
-    Input:
-        df: instance of one postcode region
-        sf: SA2 shapefile with all SA2 regions included
-    Output: 
-        the SA2 code of the corresponding postcode region
+    This function looks for the SA2 region that contains the given (latitude, longitude) pair.
+
+    :param df: instance of one postcode region
+    :param sf: SA2 shapefile
+    :returns: the corresponding SA2 code
     """
     if math.isnan(df['SA2_code']):
         for SA2_code, row in sf.iterrows():
@@ -50,7 +50,7 @@ def postcode_to_SA2(df, sf):
 
 def preprocess_income():
     """
-    This function preprocesses the external income dataset.
+    This function preprocesses the external income dataset can convert it into a csv file.
     """
     df = pd.read_excel(external_output_path + "total_income.xlsx", sheet_name='Table 1.4')
 

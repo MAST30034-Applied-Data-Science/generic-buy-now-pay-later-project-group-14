@@ -14,18 +14,10 @@ spark = (
 
 def create_features(sdf):
     """
-    This function produces the final data grouping by each merchant and aggregates to 
-    generalise the features for later model construction.
-    Features: Total number of consumers
-              Average dollar value of each transaction
-              Total number of transactions
-              Mean income of consumers of the merchant
-              Revenue Level
-              Total revenue taken from this merchant
-              Total number of postcodes
-              Tags
-    Input: preprocessed dataset
-    Output: aggregated dataset with respect to merchants
+    This function summarises each merchant's data into several features.
+
+    :param sdf: preprocessed dataset
+    :returns: aggregated dataset with respect to merchants
     """
     sdf = sdf.groupBy('merchant_abn')\
       .agg(
@@ -42,12 +34,13 @@ def create_features(sdf):
 
 def create_label(sdf):
     """
-    Generate the three key labels that goes into the final ranking.
+    Generate the three key labels that are used as features in the ranking equation.
     Key Labels: Total Number of Consumers for next period
                 Total Revenue for next period
                 Total Number of Transactions for next period
-    Input: preprocessed dataset
-    Output: aggregated dataset with label columns
+                
+    :param sdf: preprocessed dataset
+    :returns: aggregated dataset with label columns
     """
     label = sdf.groupBy('merchant_abn')\
       .agg(
@@ -58,28 +51,25 @@ def create_label(sdf):
     return label
 
 
-def main():
-    sdf = spark.read.parquet("../data/curated/full_data_without_fraud/")
+sdf = spark.read.parquet("../data/curated/full_data_without_fraud/")
 
-    # discard fraud transactions
-    sdf = sdf.filter(F.col('is_fraud')==0)
+# discard fraud transactions
+sdf = sdf.filter(F.col('is_fraud')==0)
 
-    # split the dataset 
-    train_sdf = sdf.filter((F.col('order_datetime') >= '2021-02-28') & (F.col('order_datetime') < '2021-08-28'))
-    label_sdf = sdf.filter((F.col('order_datetime') >= '2022-02-28') & (F.col('order_datetime') < '2022-08-28'))
-    test_sdf = sdf.filter((F.col('order_datetime') >= '2021-02-28') & (F.col('order_datetime') < '2022-02-28'))
+# split the dataset 
+train_sdf = sdf.filter((F.col('order_datetime') >= '2021-02-28') & (F.col('order_datetime') < '2021-08-28'))
+label_sdf = sdf.filter((F.col('order_datetime') >= '2022-02-28') & (F.col('order_datetime') < '2022-08-28'))
+test_sdf = sdf.filter((F.col('order_datetime') >= '2021-02-28') & (F.col('order_datetime') < '2022-02-28'))
 
-    # create features and labels for train/test set
-    train_data = create_features(train_sdf)
-    train_label = create_label(label_sdf)
-    test_data = create_features(test_sdf)
+# create features and labels for train/test set
+train_data = create_features(train_sdf)
+train_label = create_label(label_sdf)
+test_data = create_features(test_sdf)
 
-    # features left join label since if no historical data is provided,
-    # we cannot predict the future value of a merchant
-    train_data = train_data.join(train_label, ["merchant_abn"], how="left") 
+# features left join label since if no historical data is provided,
+# we cannot predict the future value of a merchant
+train_data = train_data.join(train_label, ["merchant_abn"], how="left") 
 
-    train_data.write.format('parquet').mode('overwrite').save("../data/curated/train_data")
-    test_data.write.format('parquet').mode('overwrite').save("../data/curated/test_data")
+train_data.write.format('parquet').mode('overwrite').save("../data/curated/train_data")
+test_data.write.format('parquet').mode('overwrite').save("../data/curated/test_data")
     
-
-main()
